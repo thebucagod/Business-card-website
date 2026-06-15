@@ -1,13 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel = "srylesheet" href="style.css">
+<!-- 
+<header> – шапка
+<nav> – навигация
+<main> – основной контент (только один на страницу)
+<section> – смысловая секция (о нас, услуги…)
+<article> – независимый блок (пост, карточка)
+<aside> – боковая панель
+<footer> – подвал
+Обычный <div> и <span> всё ещё используются, когда нет 
+подходящего семантического тега. Абзацы – <p>, заголовки – <h1>...<h6> 
+(на странице только один <h1> для главного заголовка).
+-->
 
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Мастерская</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <!-- Услуги, Наши работы, Логотип, Обо мне, Контакаты -->
+        <nav class = "header__nav">
+            <a href = "#" class = "header__nav-link"> УСЛУГИ </a>
+            <a href = "#" class = "header__nav-link"> НАШИ РАБОТЫ </a>
+            <img src="imgs/logo.png" alt = "Логотип" class = "header__nav-logo">
+            <a href = "#" class = "header__nav-link"> ОБО МНЕ </a>
+            <a href = "#" class = "header__nav-link"> КОНТАКТЫ </a>            
+        </nav>
+    </header>
+
+    <main>
+       
+    </main>
+
+    <footer class="footer">
+       
+    </footer>
 </body>
 </html>
