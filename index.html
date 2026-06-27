@@ -1,43 +1,72 @@
-<!-- 
-<header> – шапка
-<nav> – навигация
-<main> – основной контент (только один на страницу)
-<section> – смысловая секция (о нас, услуги…)
-<article> – независимый блок (пост, карточка)
-<aside> – боковая панель
-<footer> – подвал
-Обычный <div> и <span> всё ещё используются, когда нет 
-подходящего семантического тега. Абзацы – <p>, заголовки – <h1>...<h6> 
-(на странице только один <h1> для главного заголовка).
--->
-
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мастерская</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Шторы и текстиль премиум-класса для дизайнерских интерьеров в Москве. Полный цикл от идеи до монтажа. Чулпан Ханнаннова">
+    <meta name="keywords" content="шторы на заказ, текстиль для интерьера, дизайнерские шторы, римские шторы, мягкая мебель, Москва">
+    <meta name="author" content="Чулпан Ханнанова">
+
+    <title>Шторы и текстиль для дизайнерских интерьеров | Мастерская Чулпан Ханнановой</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Шторы и текстиль для дизайнерских интерьеров">
+    <meta property="og:description" content="Полный цикл — от идеи до монтажа. Москва.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/imgs/hero-bg.jpg">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/imgs/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="canonical" href="https://your-site.ru/"> -->
+
+    <!-- <script type="application/ld+json"> ... </script> -->
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Мастерская Чулпан Ханнановой",
+        "description": "Шторы и текстиль премиум-класса для дизайнерских интерьеров",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Москва",
+            "addressCountry": "RU"
+        },
+        "telephone": "+7 917 896 8989",
+        "email": "SHIK116@yandex.ru",
+        "url": "https://твой-сайт.ru",
+        "image": "https://твой-сайт.ru/assets/imgs/hero-bg.jpg"
+        }
+</script>
 </head>
+
 <body>
     <header class="header">
         <!-- Услуги, Наши работы, Логотип, Обо мне, Контакаты -->
         <nav class = "header__nav">
-            <a href = "#" class = "header__nav-link"> УСЛУГИ </a>
-            <a href = "#" class = "header__nav-link"> НАШИ РАБОТЫ </a>
-            <img src="imgs/logo.png" alt = "Логотип" class = "header__nav-logo">
-            <a href = "#" class = "header__nav-link"> ОБО МНЕ </a>
-            <a href = "#" class = "header__nav-link"> КОНТАКТЫ </a>            
+            <a href = "#" class = "header__nav-link">УСЛУГИ</a>
+            <a href = "#" class = "header__nav-link">НАШИ РАБОТЫ</a>
+            <img src="assets/imgs/logo.png" alt = "Мастерская Чулпан Ханнановой" class = "header__nav-logo">
+            <a href = "#" class = "header__nav-link">ОБО МНЕ</a>
+            <a href = "#" class = "header__nav-link">КОНТАКТЫ</a>            
         </nav>
     </header>
 
     <main>
-       
-    </main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero__content">
+                <h1 class = "hero__title">ШТОРЫ И ТЕКСТИЛЬ<br>ДЛЯ ДИЗАЙНЕРСКИХ ИНТЕРЬЕРОВ</h1>
+                <p class = "hero__subtitle">Полный цикл — от идеи до монтажа</p>
+                <a href="https://web.telegram.org/k/#@hannanova_ru" target="_blank" rel="noopener noreferrer" class="hero__btn">Прислать проект на просчет</a>
+            </div>
+        </section>
 
     <footer class="footer">
-       
+        
     </footer>
 </body>
 </html>
