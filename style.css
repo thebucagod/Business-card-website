@@ -48,6 +48,13 @@ body {
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Ablation';
+    src: url('assets/fonts/Ablation.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
 /* ============================================= */
 /* === HEADER === */
 /* ============================================= */
@@ -213,24 +220,157 @@ body {
 
 .what-i-do {
     /* Box model */
-    padding: 50px 0px 20px 40px;
+    padding-top: 60px;
+
+    /* Типографика */
+    color: #593e22;
+
+    position: relative;
+}
+
+.what-i-do__title {
+    /* Box model */
+    margin-left: 3.8rem;
+
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+
+.what-i-do__subtitle {
+    /* Box model */
+    margin-left: 3.8rem;
+
+    /* Типографика */
+    font-size: 1.7rem;
+}
+
+.what-i-do__meta {
+    /* Box model */
+    margin-top: 2rem;
+    margin-left: 1.8rem;
+
+    /* Типографика */
+    font-size: 1.2rem;
+}
+
+.what-i-do__year {
+    /* Box model */
+    padding: 0.4rem 1.5rem;
+
+    border: 1px solid #593e22;
+    border-radius: 100px;
 }
 
 .service-row {
     /* Box model */
-    padding: 150px 0;
+    position: relative;
+    padding: 6.75rem 0 11.5rem 0;
 }
 
-.service-row__text {
-    margin: 0 auto;
+.service-row-1 {
+    margin-left: 20%;
+}
+
+.service-row-2 {
+    /* Box model */
+    margin-left: 40%;
+}
+
+.service-row-3 {
+    /* Box model */
+    margin-left: 7%;
 }
 
 .service-row__title {
-    font-family: 'Cedra', serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.3em;
+    /* Box model */
+    margin-bottom: 0.875rem;
+
+    /* Типографика */
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.service-row__desc {
+    /* Типографика */
+    font-size: 1.7rem;
 }
 
 .service-row__list {
-    margin-top: 1.3em;
+    /* Box model */
+    margin-top: 3rem;
+
+    /* Типографика */
+    font-size: 1.7rem;
+}
+
+.service-row__image {
+    position: absolute;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+/* Ряд 1 — service2 справа от тектса*/
+.service-row__image--1 {
+    top: -60px;
+    right: 5%;
+    width: 24vw;
+    max-width: 450px;  
+}
+
+/* Ряд 2 — service2 слева от текста */
+.service-row__image--2 {
+    top: 0px;
+    left: -55%;
+    width: 29vw;
+    max-width: 550px;  
+}
+
+/* Ряд 3 — service3 справа от текста */
+.service-row__image--3 {
+    top: -100px;
+    right: 1%;
+    width: 37vw;
+    max-width: 700px; 
+}
+
+.divider {
+    position: absolute;
+    background: #593e22;
+    z-index: 1;
+}
+
+.divider--horizontal {
+    height: 1px;
+}
+
+.divider--vertical {
+    width: 1px;
+}
+
+@media (max-width: 1300px) {
+    .service-row {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 5%;
+    }
+
+    .service-row__image {
+        position: static;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .divider {
+        display: none;
+    }
 }
