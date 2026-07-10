@@ -1,0 +1,57 @@
+/* ============================================= */
+/* === HEADER === */
+/* ============================================= */
+
+.header {
+    /* Box model */
+    height: 140px;
+    padding: 0 5%;
+
+    /* Фон и границы */
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    /* Прочее */
+    z-index: 100;
+}
+
+.header__nav {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 2vw, 2.5rem);
+
+    /* Box model */
+    height: 100%;
+}
+
+.header__nav-link {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Типографика */
+    font-size: clamp(1.3rem, 1.4vw, 1.5rem);
+    font-weight: 500;
+    color: #A0A0A0;
+    text-decoration: none;
+    white-space: nowrap;
+
+    /* Прочее */
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #201408;
+}
+
+.header__nav-logo {
+    /* Display & Flex */
+    flex: 6;
+
+    /* Box model */
+    max-height: 90%;
+
+    /* Прочее */
+    object-fit: contain;
+}

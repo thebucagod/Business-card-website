@@ -1,3 +1,10 @@
+<!-- 1. Позиционирование — position, top/right/bottom/left, z-index
+2. Display & Flex/Grid — display, flex-direction, align-items, justify-content, flex, gap, grid-*
+3. Box model (размер и отступы) — width, height, max-width/height, padding, margin
+4. Фон и границы — background, border, border-radius, box-shadow
+5. Типографика — font-family, font-size, font-weight, line-height, letter-spacing, text-align, color, white-space
+6. Прочее/поведение — cursor, transition, opacity, object-fit, text-decoration  -->
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -17,12 +24,19 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/imgs/hero-bg.jpg">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/what-i-do.css">
+    <link rel="stylesheet" href="css/process.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
     <link rel="icon" href="assets/imgs/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- <link rel="canonical" href="https://your-site.ru/"> -->
 
     <!-- <script type="application/ld+json"> ... </script> -->
+
 
     <script type="application/ld+json">
         {
@@ -80,7 +94,13 @@
                     <p class="service-row__desc">Создаю текстиль, который поддерживает стиль<br>интерьера и делает пространство уютным</p>
                     <p class="service-row__list">Шторы, тюль, римские и рулонные системы,<br>карнизы и декоративный текстиль и т.д</p>
                 </div>
-                <img src="assets/imgs/service1.jpg" alt="Текстильное оформление" class="service-row__image service-row__image--1">
+                <a href="#" class="service-row__image-link service-row__image-link--1">
+                    <img src="assets/imgs/service1.jpg" alt="Текстильное оформление" class="service-row__image">
+                    <div class="service-row__overlay">
+                        <span class="service-row__overlay-text">Подробнее тут →</span>
+                        <span class="service-row__overlay-line"></span>
+                    </div>
+                </a>
             </div>
 
             <div class="service-row service-row-2">
@@ -89,7 +109,13 @@
                     <p class="service-row__desc">Мебель по индивидуальным размерам, которая<br>идеально вписывается в интерьер.</p>
                     <p class="service-row__list">Диваны, кресла, кровати, пуфы<br>и мягкие стеновые панели.</p>
                 </div>
-                <img src="assets/imgs/service2.jpg" alt="Мягкая мебель и панели" class="service-row__image service-row__image--2">
+                <a href="#" class="service-row__image-link service-row__image-link--2">
+                    <img src="assets/imgs/service2.jpg" alt="Текстильное оформление" class="service-row__image">
+                    <div class="service-row__overlay">
+                        <span class="service-row__overlay-text">Подробнее тут →</span>
+                        <span class="service-row__overlay-line"></span>
+                    </div>
+                </a>
             </div>
 
             <div class="service-row service-row-3">
@@ -97,7 +123,13 @@
                     <h3 class="service-row__title">Комплектация интерьера</h3>
                     <p class="service-row__desc">Подбор мебели, света и декора, чтобы интерьер<br>выглядел цельно и гармонично.</p>
                 </div>
-                <img src="assets/imgs/service3.jpg" alt="Комплектация интерьера" class="service-row__image service-row__image--3">
+                <a href="#" class="service-row__image-link service-row__image-link--3">
+                    <img src="assets/imgs/service3.jpg" alt="Текстильное оформление" class="service-row__image">
+                    <div class="service-row__overlay">
+                        <span class="service-row__overlay-text">Подробнее тут →</span>
+                        <span class="service-row__overlay-line"></span>
+                    </div>
+                </a>
             </div>
 
             <div class="divider divider--horizontal divider1" style="top: 205px; left: 0; width: 90%;"></div>
@@ -107,10 +139,65 @@
             <div class="divider divider--vertical divider5" style="top: 1350px; left: 59.5%; height: 395px;"></div>
 
         </section>
+
+        <section class="process">
+            <h2 class="process__title">ПОНЯТНЫЙ И ПРОСТОЙ ПРОЦЕСС</h2>
+            <div class="process_line"></div>
+            <p class="process__subtitle">Делаем работу под ключ от замера до финальной навески</p>
+
+            <div class="process__body">
+            <ul class="process__steps">
+                <li class="process__step process__step--active"
+                    data-step="1"
+                    data-desc="Первичный контакт и консультация. Вы присылаете фото или видео помещения, чертёж или проект (если есть) и рассказываете о своих пожеланиях. Я даю рекомендации по возможным решениям, тканям и ориентирую по стоимости."
+                    data-img="assets/imgs/process1.jpg">
+                    <span class="process__step-name">Консультация</span>
+                    <span class="process__step-number">1</span>
+                </li>
+                <li class="process__step"
+                    data-step="2"
+                    data-desc="Делаем точный расчёт — количество ткани, фурнитуры, карнизов. Вы получаете детальную смету до начала работ."
+                    data-img="assets/imgs/process2.jpg">
+                    <span class="process__step-name">Расчёт</span>
+                    <span class="process__step-number">2</span>
+                </li>
+                <li class="process__step"
+                    data-step="3"
+                    data-desc="Приезжаю на объект, снимаю точные замеры всех окон и проёмов. Учитываю особенности помещения."
+                    data-img="assets/imgs/process3.jpg">
+                    <span class="process__step-name">Замер</span>
+                    <span class="process__step-number">3</span>
+                </li>
+                <li class="process__step"
+                    data-step="4"
+                    data-desc="Фиксируем все договорённости — материалы, сроки, стоимость. Никаких скрытых платежей после подписания."
+                    data-img="assets/imgs/process4.jpg">
+                    <span class="process__step-name">Договор</span>
+                    <span class="process__step-number">4</span>
+                </li>
+                <li class="process__step"
+                    data-step="5"
+                    data-desc="Изготавливаем шторы точно по замерам. Контролирую качество на каждом этапе пошива."
+                    data-img="assets/imgs/process5.jpg">
+                    <span class="process__step-name">Пошив</span>
+                    <span class="process__step-number">5</span>
+                </li>
+            </ul>
+
+                <div class="process__content">
+                    <p class="process__content-desc">Первичный контакт и консультация<br>
+                        Вы присылаете фото или видео помещения, чертёж или проект (если есть) и рассказываете о своих пожеланиях.<br>
+                        Я даю рекомендации по возможным решениям, тканям и ориентирую по стоимости.</p>
+                    <img src="assets/imgs/process1.jpg" alt="Консультация" class="process__image">
+                </div>
+            </div>
+        </section>
     </main>    
 
     <footer class="footer">
         
     </footer>
+
+    <script src="js/process.js"></script>
 </body>
 </html>

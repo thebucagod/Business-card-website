@@ -1,0 +1,239 @@
+/* ============================================= */
+/* === WHAT I DO === */
+/* ============================================= */
+
+.what-i-do {
+    /* Позиционирование */
+    position: relative;
+
+    /* Box model */
+    padding-top: 60px;
+
+    /* Типографика */
+    color: #593e22;
+}
+
+.what-i-do__title {
+    /* Box model */
+    margin-left: 3.8rem;
+
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+
+.what-i-do__subtitle {
+    /* Box model */
+    margin-left: 3.8rem;
+
+    /* Типографика */
+    font-size: 1.7rem;
+}
+
+.what-i-do__meta {
+    /* Box model */
+    margin-top: 2rem;
+    margin-left: 1.8rem;
+
+    /* Типографика */
+    font-size: 1.2rem;
+}
+
+.what-i-do__year {
+    /* Box model */
+    padding: 0.4rem 1.5rem;
+
+    /* Фон и границы */
+    border: 1px solid #593e22;
+    border-radius: 100px;
+}
+
+.service-row {
+    /* Позиционирование */
+    position: relative;
+
+    /* Box model */
+    padding: 6.75rem 0 11.5rem 0;
+}
+
+.service-row-1 {
+    /* Box model */
+    margin-left: 20%;
+}
+
+.service-row-2 {
+    /* Box model */
+    margin-left: 40%;
+}
+
+.service-row-3 {
+    /* Box model */
+    margin-left: 7%;
+}
+
+.service-row__title {
+    /* Box model */
+    margin-bottom: 0.875rem;
+
+    /* Типографика */
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.service-row__desc {
+    /* Типографика */
+    font-size: 1.7rem;
+}
+
+.service-row__list {
+    /* Box model */
+    margin-top: 3rem;
+
+    /* Типографика */
+    font-size: 1.7rem;
+}
+
+.service-row__image-link {
+    /* Позиционирование */
+    position: absolute;
+    z-index: 2;
+
+    /* Display & Flex */
+    display: block;
+
+    /* Box model */
+    height: auto;
+
+    /* Фон и границы */
+    border-radius: 4px;
+
+    /* Прочее */
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* Ряд 1 — service1 справа от текста */
+.service-row__image-link--1 {
+    /* Позиционирование */
+    top: -60px;
+    right: 5%;
+
+    /* Box model */
+    width: 24vw;
+    max-width: 450px;
+}
+
+/* Ряд 2 — service2 слева от текста */
+.service-row__image-link--2 {
+    /* Позиционирование */
+    top: 0px;
+    left: -55%;
+
+    /* Box model */
+    width: 29vw;
+    max-width: 550px;
+}
+
+/* Ряд 3 — service3 справа от текста */
+.service-row__image-link--3 {
+    /* Позиционирование */
+    top: -100px;
+    right: 1%;
+
+    /* Box model */
+    width: 37vw;
+    max-width: 700px;
+}
+
+.service-row__image {
+    /* Display & Flex */
+    display: block;
+
+    /* Box model */
+    width: 100%;
+    height: auto;
+
+    /* Прочее */
+    object-fit: cover;
+}
+
+.service-row__overlay {
+    /* Позиционирование */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    /* Box model */
+    height: 0%;          /* стартовая высота — затемнения не видно */
+
+    /* Фон и границы */
+    background: rgba(50, 34, 17, 0.7);
+
+    /* Прочее */
+    overflow: hidden;
+    transition: height 0.4s ease;
+}
+
+.service-row__image-link:hover .service-row__overlay {
+    height: 100%;        /* при наведении слой "вырастает" снизу вверх на всю высоту */
+}
+
+.service-row__overlay-text {
+    /* Типографика */
+    color: white;
+    font-size: 1.1rem;
+
+    /* Прочее */
+    opacity: 0;
+    transition: opacity 0.4s ease 0.15s;     /* задержка — текст появляется чуть позже, когда слой уже подрос */
+}
+
+.service-row__image-link:hover .service-row__overlay-text {
+    opacity: 1;
+}
+
+.service-row__overlay-line {
+    /* Box model */
+    width: 60px;          /* короче текста, как ты и сказал */
+    height: 1px;
+
+    /* Фон и границы */
+    background: white;
+
+    /* Прочее */
+    opacity: 0;
+    transition: opacity 0.4s ease 0.25s;     /* появляется ещё чуть позже текста */
+}
+
+.service-row__image-link:hover .service-row__overlay-line {
+    opacity: 1;
+}
+
+.divider {
+    /* Позиционирование */
+    position: absolute;
+    z-index: 1;
+
+    /* Фон и границы */
+    background: #593e22;
+}
+
+.divider--horizontal {
+    /* Box model */
+    height: 1px;
+}
+
+.divider--vertical {
+    /* Box model */
+    width: 1px;
+}

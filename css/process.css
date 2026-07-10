@@ -1,0 +1,143 @@
+/* ============================================= */
+/* === PROCESS === */
+/* ============================================= */
+
+.process {
+    /* Box model */
+    padding: 100px 3%;
+}
+
+.process__title {
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.process_line {
+    /* Box model */
+    width: 100%;
+    margin: 1rem 0;
+
+    border: 1px solid rgba(89, 62, 34, 0.4);
+}
+
+.process__subtitle {
+    /* Box model */
+    margin-bottom: 7rem;
+
+    /* Типографика */
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.process__body {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.process__steps {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 7rem;
+
+    /* Box model */
+    width: 100%;
+
+    /* Прочее */
+    list-style: none;
+}
+
+.process__step {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    /* Box model */
+    padding: 1rem;
+
+    /* Типографика */
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    white-space: nowrap;
+
+    /* Прочее */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.process__step--active {
+    color: #8f5c28;
+}
+
+.process__step-number {
+    /* Display & Flex */
+    display: block;
+
+    /* Типографика */
+    text-align: center;
+
+    /* Прочее */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.process__step--active .process__step-number {
+    opacity: 1;
+}
+
+.process__content {
+    /* Box model */
+    max-width: 1300px; 
+    width: 70%;
+
+    /* Display & Flex */
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.process__content-desc {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    min-height: 260px;
+    
+    /* Box model */
+    flex: 4;
+    margin-right: 1rem;
+    padding: 2rem;
+
+    /* Типографика */
+    font-size: 1.5rem;
+    line-height: 2;
+
+    border: 2px solid;
+    border-radius: 51px;
+}
+
+.process__content-desc,
+.process__image {
+    transition: opacity 0.3s ease;
+}
+
+.process__image {
+    /* Box model */
+    max-width: 300px;
+    max-height: 260px;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+
+    /* Прочее */
+    object-fit: cover;
+
+    border: 2px solid;
+    border-radius: 51px;
+}
