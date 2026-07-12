@@ -1,0 +1,137 @@
+/* ============================================= */
+/* === ABOUT === */
+/* ============================================= */
+
+.about {
+    /* Фон и границы */
+    position: relative;
+    background-color: #f4f2f0;
+}
+
+.about__inner {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    z-index: 1;
+}
+
+.about__photo-wrap {
+    /* Display & Flex */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    /* Box model */
+    padding: 7rem 0;
+    box-sizing: border-box;
+}
+
+.about__photo {
+    /* Box model */
+    width: 90%;
+
+    /* Прочее */
+    object-fit: cover;
+    display: block;
+}
+
+.about__text {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: 1.4rem;
+
+    /* Box model */
+    padding-top: 4rem;
+    margin-left: 50px;
+}
+
+.about__title {
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 3.5rem;
+}
+
+.about__desc {
+    /* Типографика */
+    font-size: 1.5rem;
+
+    /* Box model */
+    margin-bottom: 2rem;
+}
+
+.about__sec-title {
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 2.5rem;
+}
+
+.about__list {
+    /* Типографика */
+    font-size: 1.5rem;
+
+    /* Box model */
+    margin-bottom: 4rem;
+}
+
+.about__btn {
+    /* Display & Flex */
+    display: inline-block;
+    align-self: center;
+
+    /* Типографика */
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+
+    /* Прочее */
+    border-radius: 50px;
+    background-color: #201408;
+    opacity: 0.8;
+}
+
+.about__line {
+    /* Box model */
+    width: 3px;
+    margin-right: 20px;
+
+    /* Фон и границы */
+    background: currentColor;
+    opacity: 0.4;
+
+    /* Прочее */
+    border-radius: 20px;
+}
+
+.about__line-first {
+    /* Box model */
+    margin-right: 15px;
+}
+
+.about__deco {
+    /* Позиционирование */
+    position: absolute;
+    z-index: 0;
+
+    /* Box model */
+    width: 20%;
+    height: auto;
+
+    /* Прочее */
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.about__deco--top {
+    top: 0;
+    left: 0;
+}
+
+.about__deco--bottom {
+    bottom: 0;
+    left: 0;
+}

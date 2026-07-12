@@ -7,7 +7,7 @@
     position: relative;
 
     /* Box model */
-    padding-top: 60px;
+    padding: 60px 0;
 
     /* Типографика */
     color: #593e22;

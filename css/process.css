@@ -5,6 +5,9 @@
 .process {
     /* Box model */
     padding: 100px 3%;
+
+    /* Фон и границы */
+    background-color: #f8f7f6;
 }
 
 .process__title {
@@ -45,7 +48,7 @@
     flex-direction: row;
     gap: 3rem;
     justify-content: center;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 
     /* Box model */
     width: 100%;
@@ -66,7 +69,7 @@
 
     /* Типографика */
     font-size: clamp(1.5rem, 2vw, 2rem);
-    white-space: nowrap;
+    white-space: pre-wrap;
 
     /* Прочее */
     cursor: pointer;
@@ -108,7 +111,7 @@
     /* Display & Flex */
     display: flex;
     align-items: center;
-    min-height: 260px;
+    min-height: 310px;
     
     /* Box model */
     flex: 4;
@@ -130,8 +133,8 @@
 
 .process__image {
     /* Box model */
-    max-width: 300px;
-    max-height: 260px;
+    max-width: 310px;
+    max-height: 310px;
     flex: 1;
     aspect-ratio: 1 / 1;
 

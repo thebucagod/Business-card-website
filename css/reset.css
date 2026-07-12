@@ -11,6 +11,9 @@
 body {
     font-family: 'Evolventa', system-ui, sans-serif;
     color: #593e22;
+    h1, h2, h3 {
+        font-weight: normal;
+    }
 }
 
 /* ============================================= */
