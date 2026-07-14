@@ -1,0 +1,143 @@
+/* ============================================= */
+/* === PROJECTS === */
+/* ============================================= */
+
+.projects {
+    /* Box model */
+    position: relative;
+    padding: 80px 3%;
+}
+
+.projects__title {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* Box model */
+    margin-bottom: 3rem;
+}
+
+.projects__title--text {
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    color: #363636;
+    font-size: 3rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.projects__line {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Box model */
+    height: 2px;
+
+    /* Фон */
+    background-color: black;
+    opacity: 0.5;
+}
+
+.projects__grid {
+    /* Display & Flex */
+    display: flex;
+    gap: 16px;
+}
+
+.projects__left {
+    /* Display & Grid */
+    display: grid;
+    grid-template-columns: 1.3fr 0.6fr 0.6fr 1.3fr;
+    grid-template-rows: 1fr 1fr;    
+    grid-template-rows: 450px 450px;
+    gap: 16px;
+
+    /* Box model */
+    flex: 2;
+}
+
+/* Ряд 1: блок 1 узкий, блок 2 широкий*/
+.projects__card--1 { grid-column: 1 / 2; }
+.projects__card--2 { grid-column: 2 / 5; }
+
+/* Ряд 2: блок 3 широкий, блок 4 узкий — зеркально */
+.projects__card--3 { grid-column: 1 / 4; }
+.projects__card--4 { grid-column: 4 / 5; }
+
+.projects__card {
+    /* Позиционирование */
+    position: relative;
+
+    /* Display & Flex */
+    display: flex;
+    align-items: flex-end;
+
+    /* Box model */
+    padding: 20px;
+
+    /* Фон и границы */
+    background-size: cover;
+    background-position: center;
+
+    /* Прочее */
+    overflow: hidden;
+}
+
+.projects__card::after {
+    content: '';
+
+    /* Позиционирование */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    /* Box model */
+    height: 40%;
+
+    /* Фон и границы */
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+
+.projects__card--5 {
+    /* Box model */
+    flex: 1;
+}
+
+/* Фоновые картинки */
+.projects__card--1 { background-image: url('../assets/imgs/project-1.jpg'); }
+.projects__card--2 { background-image: url('../assets/imgs/project-2.jpg'); }
+.projects__card--3 { background-image: url('../assets/imgs/project-3.jpg'); }
+.projects__card--4 { background-image: url('../assets/imgs/project-4.jpg'); }
+.projects__card--5 { background-image: url('../assets/imgs/project-5.jpg'); }
+
+.projects__card-text {
+    /* Позиционирование */
+    position: relative;
+    z-index: 2;
+
+    /* Box model */
+    padding: 12px 16px;
+
+    /* Типографика */
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.projects__logo {
+    /* Позиционирование */
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    /* Box model */
+    width: 60px;
+    height: 60px;
+
+    /* Прочее */
+    object-fit: contain;
+}
