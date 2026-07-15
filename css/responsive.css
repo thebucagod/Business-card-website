@@ -1,5 +1,5 @@
 /* ============================================= */
-/* === RESPONSIVE: WHAT I DO (≤1300px) === */
+/* === RESPONSIVE: (≤1300px) === */
 /* ============================================= */
 
 @media (max-width: 1300px) {
@@ -104,17 +104,44 @@
 
     .process__image {
         /* Прочее */
-        display: none;
+        display: none; 
     }
 
-    /* ============================================= */
-    /* === RESPONSIVE: ABOUT (≤1300px) === */
-    /* ============================================= */
+    /* === PROJECTS === */
+    .projects__grid {
+        /* Display & Flex */
+        flex-direction: column;
+    }
 
-    @media (max-width: 1300px) {
-        .about__photo-wrap,
-        .about__deco {
-            display: none;
-        }
+    .projects__left {
+        /* Box model */
+        flex: 0 0 auto;
+    }
+
+    .projects__card--5 {
+        /* Box model */
+        width: 100%;
+        min-height: 500px;
+    }
+
+    /* === REVIEWS === */
+    .reviews__grid {
+        /* Display & Flex */
+        flex-wrap: wrap;
+    }
+
+    .reviews__card {
+        /* Box model */
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    /* === ABOUT === */
+
+    .about__photo-wrap,
+    .about__deco {
+        display: none;
+    }
+    .about__text {
+        margin-bottom: 5rem;
     }
 }

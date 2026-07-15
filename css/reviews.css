@@ -1,0 +1,94 @@
+/* ============================================= */
+/* === REVIEWS === */
+/* ============================================= */
+
+.reviews {
+    /* Box model */
+    padding: 80px 3%;
+
+    background-color: #f8f7f6;
+}
+
+.reviews__title {
+    /* Box model */
+    margin-bottom: 3rem;
+
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.reviews__grid {
+    /* Display & Flex */
+    display: flex;
+    gap: 16px;
+}
+
+.reviews__card {
+    /* Позиционирование */
+    position: relative;
+
+    /* Display & Flex */
+    flex: 1;
+
+    /* Прочее */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.reviews__photo {
+    /* Box model */
+    width: 100%;
+    height: 100%;
+
+    /* Прочее */
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Overlay — затемнение снизу вверх */
+.reviews__overlay {
+    /* Позиционирование */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    /* Display & Flex — центрируем фото отзыва по вертикали */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
+    height: 0%;
+
+    background-color: rgba(0, 0, 0, 0.79);
+
+    /* Прочее */
+    overflow: hidden;
+    transition: height 0.4s ease;
+}
+
+.reviews__card:hover .reviews__overlay {
+    height: 100%;
+}
+
+/* Фото отзыва — горизонтальное, появляется с задержкой */
+.reviews__review-photo {
+    /* Box model */
+    width: 100%;
+    height: auto;
+
+    /* Прочее */
+    display: block;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.15s;   /* задержка как у overlay-text в what-i-do */
+}
+
+.reviews__card:hover .reviews__review-photo {
+    opacity: 1;
+}
