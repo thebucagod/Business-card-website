@@ -49,3 +49,10 @@ body {
     font-weight: 400;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../assets/fonts/Garet-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}

@@ -1,0 +1,176 @@
+/* ============================================= */
+/* === FOOTER === */
+/* ============================================= */
+
+.footer {
+    /* Позиционирование */
+    position: relative;
+
+    /* Box model */
+    min-height: 95vh;
+    padding-top: 200px;
+
+    /* Фон */
+    background: white;
+
+    /* Прочее */
+    overflow: hidden;
+}
+
+.footer__curtain {
+    /* Позиционирование */
+    position: absolute;
+    top: 0;
+
+    /* Box model */
+    height: auto;
+}
+
+.footer__curtain--left {
+    /* Позиционирование */
+    left: 0;
+    z-index: 0;
+
+    /* Box model */
+    width: 9%;
+}
+
+.footer__curtain--right {
+    /* Позиционирование */
+    right: 0;
+    z-index: 3;
+
+    /* Box model */
+    width: 11%;
+}
+
+.footer__contacts-bar {
+    /* Box model */
+    width: 100%;
+    padding: 2rem 0;
+
+    /* Позиционирование */
+    z-index: 1;
+
+    /* Фон */
+    background: #ddd3c6;
+
+    /* Прочее */
+    position: relative;
+}
+
+.footer__title {
+    /* Типографика */
+    font-family: 'Ablation', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #593e22;
+}
+
+.footer__body {
+    /* Позиционирование */
+    position: relative;
+    z-index: 2;
+
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Box model */
+    padding-top: 2.5rem;
+}
+
+.footer__tagline {
+    /* Box model */
+    margin-bottom: 0.5rem;
+
+    /* Типографика */
+    font-size: 2rem;
+    text-align: center;
+    color: #593e22;
+}
+
+.footer__tagline-line {
+    /* Box model */
+    width: 27rem;
+    height: 2px;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+
+    /* Фон */
+    background: #898179;
+    opacity: 0.8;
+}
+
+.footer__subtitle {
+    /* Box model */
+    margin-bottom: 3rem;
+
+    /* Типографика */
+    font-size: 1.5rem;
+    text-align: center;
+    color: #593e22;
+    font-family: 'Garet', system-ui, sans-serif;
+}
+
+.footer__contacts {
+    /* Box model */
+    margin-right: 10rem;
+    height: 210px;
+
+    /* Display & Flex */
+    display: flex;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+.footer__contacts-line {
+    /* Box model */
+    width: 12px;
+
+    /* Фон */
+    background: #baa286;
+    opacity: 0.85;
+}
+
+.footer__contacts-list {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    /* Прочее */
+    list-style: none;
+}
+
+.footer__contacts-item {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__icon {
+    /* Box model */
+    width: 40px;
+    height: 40px;
+
+    /* Прочее */
+    object-fit: contain;
+}
+
+.footer__link {
+    /* Типографика */
+    font-size: 1.7rem;
+    color: #593e22;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+
+    font-family: 'Garet', system-ui, sans-serif;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
