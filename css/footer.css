@@ -7,8 +7,8 @@
     position: relative;
 
     /* Box model */
-    min-height: 95vh;
     padding-top: 200px;
+    padding-bottom: 180px;
 
     /* Фон */
     background: white;
@@ -32,7 +32,7 @@
     z-index: 0;
 
     /* Box model */
-    width: 9%;
+    width: clamp(200px, 9%, 240px);
 }
 
 .footer__curtain--right {
@@ -41,7 +41,7 @@
     z-index: 3;
 
     /* Box model */
-    width: 11%;
+    width: clamp(240px, 11%, 280px);
 }
 
 .footer__contacts-bar {

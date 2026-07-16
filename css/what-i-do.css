@@ -174,7 +174,7 @@
     gap: 12px;
 
     /* Box model */
-    height: 0%;          /* стартовая высота — затемнения не видно */
+    height: 0%;
 
     /* Фон и границы */
     background: rgba(50, 34, 17, 0.7);
@@ -185,7 +185,7 @@
 }
 
 .service-row__image-link:hover .service-row__overlay {
-    height: 100%;        /* при наведении слой "вырастает" снизу вверх на всю высоту */
+    height: 100%;
 }
 
 .service-row__overlay-text {
@@ -195,7 +195,7 @@
 
     /* Прочее */
     opacity: 0;
-    transition: opacity 0.4s ease 0.15s;     /* задержка — текст появляется чуть позже, когда слой уже подрос */
+    transition: opacity 0.4s ease 0.15s;
 }
 
 .service-row__image-link:hover .service-row__overlay-text {
@@ -204,7 +204,7 @@
 
 .service-row__overlay-line {
     /* Box model */
-    width: 60px;          /* короче текста, как ты и сказал */
+    width: 60px;
     height: 1px;
 
     /* Фон и границы */
@@ -212,7 +212,7 @@
 
     /* Прочее */
     opacity: 0;
-    transition: opacity 0.4s ease 0.25s;     /* появляется ещё чуть позже текста */
+    transition: opacity 0.4s ease 0.25s;
 }
 
 .service-row__image-link:hover .service-row__overlay-line {
