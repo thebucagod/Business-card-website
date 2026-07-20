@@ -45,19 +45,19 @@
     gap: 1.4rem;
 
     /* Box model */
-    padding-top: 4rem;
+    padding-top: 7rem;
     margin-left: 50px;
 }
 
 .about__title {
     /* Типографика */
-    font-family: 'Ablation', sans-serif;
-    font-size: 3.5rem;
+    font-size: 5rem;
+    font-weight: 300;
 }
 
 .about__desc {
     /* Типографика */
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     /* Box model */
     margin-bottom: 2rem;
@@ -65,13 +65,13 @@
 
 .about__sec-title {
     /* Типографика */
-    font-family: 'Ablation', sans-serif;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    font-weight: 300;
 }
 
 .about__list {
     /* Типографика */
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     /* Box model */
     margin-bottom: 4rem;

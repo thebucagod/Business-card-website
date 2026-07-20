@@ -32,7 +32,6 @@
 
     /* Типографика */
     font-size: clamp(1.3rem, 1.4vw, 1.5rem);
-    font-weight: 500;
     color: #A0A0A0;
     text-decoration: none;
     white-space: nowrap;

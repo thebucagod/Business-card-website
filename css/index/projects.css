@@ -15,9 +15,9 @@
 }
 
 .projects__title--text {
-  font-family: 'Ablation', sans-serif;
   color: #363636;
   font-size: 3rem;
+  font-weight: 400;
   text-align: center;
   white-space: nowrap;
 }
@@ -81,11 +81,11 @@
   flex: 1;
 }
 
-.projects__card--1 { background-image: url('../assets/imgs/project-1.webp'); }
-.projects__card--2 { background-image: url('../assets/imgs/project-2.webp'); }
-.projects__card--3 { background-image: url('../assets/imgs/project-3.webp'); }
-.projects__card--4 { background-image: url('../assets/imgs/project-4.webp'); }
-.projects__card--5 { background-image: url('../assets/imgs/project-5.webp'); }
+.projects__card--1 { background-image: url('../../assets/imgs/project-1.webp'); }
+.projects__card--2 { background-image: url('../../assets/imgs/project-2.webp'); }
+.projects__card--3 { background-image: url('../../assets/imgs/project-3.webp'); }
+.projects__card--4 { background-image: url('../../assets/imgs/project-4.webp'); }
+.projects__card--5 { background-image: url('../../assets/imgs/project-5.webp'); }
 
 .projects__card-text {
   position: relative;

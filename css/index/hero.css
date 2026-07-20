@@ -15,7 +15,7 @@
     min-height: 85.3vh;
 
     /* Фон и границы */
-    background-image: url('../assets/imgs/hero-bg.webp');
+    background-image: url('../../assets/imgs/hero-bg.webp');
     background-size: cover;
     background-position: center center;
 
@@ -57,8 +57,7 @@
     margin-bottom: 1.5em;
 
     /* Типографика */
-    font-family: 'INTRO', sans-serif;
-    font-weight: 700;
+    font-weight: 1000;
     font-size: 4rem;
     line-height: 1.5;
 }
@@ -69,9 +68,8 @@
     margin-bottom: 1em;
 
     /* Типографика */
-    font-family: 'Cedra', serif;
     font-size: 5rem;
-    font-weight: 400;
+    font-weight: 320;
 }
 
 /* Кнопка */

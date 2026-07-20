@@ -61,9 +61,8 @@
 
 .footer__title {
     /* Типографика */
-    font-family: 'Ablation', sans-serif;
-    font-size: 5rem;
-    font-weight: 600;
+    font-size: 6rem;
+    font-weight: 200;
     text-align: center;
     color: #593e22;
 }
@@ -112,7 +111,6 @@
     font-size: 1.5rem;
     text-align: center;
     color: #593e22;
-    font-family: 'Garet', system-ui, sans-serif;
 }
 
 .footer__contacts {
@@ -167,8 +165,6 @@
     color: #593e22;
     text-decoration: none;
     letter-spacing: 0.05em;
-
-    font-family: 'Garet', system-ui, sans-serif;
 }
 
 .footer__link:hover {

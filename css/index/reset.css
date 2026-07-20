@@ -1,0 +1,22 @@
+/* ============================================= */
+/* === Fonts === */
+/* ============================================= */
+
+/* Mulish */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* ============================================= */
+/* === Reset & Base Styles === */
+/* ============================================= */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-weight: 250;
+    color: #593e22;
+}
