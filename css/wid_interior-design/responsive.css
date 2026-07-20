@@ -1,0 +1,22 @@
+/* ============================================= */
+/* === RESPONSIVE: (≤1300px) === */
+/* ============================================= */
+
+@media (max-width: 1300px) {
+    .wid-page__cards {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 3rem 5% 0 5%;
+        align-items: center;
+    }
+
+    .wid-page__card {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .wid-page__title {
+        font-size: 2.2rem; /* Подберите значение, при котором текст влезает целиком */
+        white-space: wrap;
+    }
+}

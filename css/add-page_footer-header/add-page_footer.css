@@ -1,0 +1,59 @@
+.add-footer {
+    /* Box model */
+    padding: 40px 0 30px;
+
+    /* Фон */
+    background: #ddd3c6;
+}
+
+.add-footer__bar {
+    /* Box model */
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+
+    /* Фон */
+    background: rgba(89, 62, 34, 0.3);
+}
+
+.add-footer__contacts {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    max-width: max-content; 
+    margin: 0 auto; 
+
+    /* Прочее */
+    list-style: none;
+}
+
+.add-footer__item {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.add-footer__icon {
+    /* Box model */
+    width: 24px;
+    height: 24px;
+
+    /* Прочее */
+    object-fit: contain;
+}
+
+.add-footer__link {
+    /* Типографика */
+    font-size: 1.3rem;
+    color: #593e22;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.add-footer__link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+.add-header {
+    /* Display & Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Фон и границы */
+    background: #f4f2f0;
+}
+
+.add-header__logo {
+    /* Box model */
+    height: 130px;
+
+    /* Прочее */
+    object-fit: contain;
+}

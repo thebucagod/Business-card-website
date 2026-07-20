@@ -1,0 +1,101 @@
+.wid-page {
+    /* Box model */
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+
+    /* Фон */
+    background-color: #f4f2f0;
+}
+
+.wid-page__title-row {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    /* Box model */
+    margin-bottom: 3rem;
+}
+
+.wid-page__line {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Box model */
+    height: 2px;
+
+    /* Фон */
+    background: rgba(89, 62, 34, 0.6);
+}
+
+.wid-page__title {
+    /* Типографика */
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    color: #593e22;
+}
+
+.wid-page__desc {
+    /* Box model */
+    margin-bottom: 1.5rem;
+
+    /* Типографика */
+    font-size: 1.3rem;
+    text-align: center;
+    color: #593e22;
+    line-height: 1.8;
+}
+
+.wid-page__cards {
+    /* Display & Flex */
+    display: flex;
+    gap: 20%;
+
+    /* Box model */
+    margin: 3rem 18% 0 18%;
+    padding-bottom: 3rem;
+}
+
+.wid-page__card {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Box model */
+    padding: 2rem;
+
+    /* Фон */
+    background: #ddd3c6;
+    border-radius: 8px;
+}
+
+.wid-page__card-title {
+    /* Box model */
+    margin-bottom: 1.5rem;
+
+    /* Типографика */
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    letter-spacing: 0.08em;
+}
+
+.wid-page__list {
+    /* Box model */
+    padding-left: 1.2rem;
+
+    /* Типографика */
+    font-size: 1.2rem;
+    color: black;
+    line-height: 2.2;
+}
+
+.wid-page__card-text {
+    /* Типографика */
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.9;
+}
