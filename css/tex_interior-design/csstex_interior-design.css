@@ -1,0 +1,183 @@
+.tex-page {
+    /* Box model */
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 3rem 0;
+
+    /* Фон */
+    background-color: #f4f2f0;
+}
+
+.tex-page__title-row {
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    /* Box model */
+    margin-bottom: 3rem;
+}
+
+.tex-page__line {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Box model */
+    height: 2px;
+
+    /* Фон */
+    background: rgba(89, 62, 34, 0.6);
+}
+
+.tex-page__title {
+    /* Типографика */
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    color: #593e22;
+}
+
+.tex-page__desc {
+    /* Box model */
+    margin-bottom: 5rem;
+
+    /* Типографика */
+    font-size: 1.3rem;
+    text-align: center;
+    color: #593e22;
+    line-height: 1.8;
+}
+
+.tex-page__what-we-create {
+    /* Box model */
+    padding: 0 3rem;
+
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tex-page__wwc-desc {
+    /* Box model */
+    margin-bottom: 3rem;
+
+    /* Типографика */
+    font-size: 3rem;
+}
+
+/* ============================================= */
+/* === CARD SLIDER === */
+/* ============================================= */
+
+.card-slider {
+    /* Позиционирование */
+    position: relative;
+
+    /* Display */
+    display: grid;          /* ← добавляем grid */
+
+    /* Box model */
+    overflow: hidden;
+    /* min-height убираем — высоту даст реальный контент */
+}
+
+.card-slide {
+    /* Позиционирование — убираем absolute */
+    grid-area: 1 / 1;       /* ← все карточки в одну ячейку */
+
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    /* Box model */
+    width: 100%;
+
+    /* Прочее */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-slide--active {
+    /* Прочее */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card-slide__photo-wrap {
+    /* Box model */
+    width: 50%;
+    height: clamp(20rem, 30vw, 35rem);
+    flex-shrink: 1;
+
+    /* Display & Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-slide__photo {
+    /* Box model */
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 40px;
+
+    /* Прочее */
+    object-fit: contain;
+    object-position: center;
+}
+
+.card-slide__content {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    /* Box model */
+    flex: 1;
+    padding-top: 1rem;
+}
+
+.card-slide__title {
+    /* Типографика */
+    font-size: 2rem;
+    font-weight: 300;
+    color: #593e22;
+    text-align: center;
+}
+
+.card-slide__text {
+    /* Типографика */
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.card-slider__controls {
+    /* Display & Flex */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    /* Box model */
+    margin-top: 2rem;
+}
+
+.card-slider__btn {
+    /* Box model */
+    width: 50px;
+    height: 50px;
+
+    /* Прочее */
+    object-fit: contain;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.card-slider__btn:hover {
+    opacity: 0.7;
+}

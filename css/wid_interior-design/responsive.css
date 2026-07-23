@@ -16,7 +16,7 @@
     }
 
     .wid-page__title {
-        font-size: 2.2rem; /* Подберите значение, при котором текст влезает целиком */
+        font-size: 2.2rem;
         white-space: wrap;
     }
 }
