@@ -1,8 +1,13 @@
 .add-header {
+    /* Box model */
+    height: 140px;
+
     /* Display & Flex */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 31px;
+    padding-top: 5px;
 
     /* Фон и границы */
     background: #f4f2f0;
@@ -10,7 +15,7 @@
 
 .add-header__logo {
     /* Box model */
-    height: 130px;
+    height: 126px;
 
     /* Прочее */
     object-fit: contain;
