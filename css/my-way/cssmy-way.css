@@ -1,0 +1,128 @@
+.my-way-page {
+    /* Позиционирование */
+    position: relative;
+
+    /* Box model */
+    width: 100%;
+    padding: 3.5rem 4rem 3rem;
+
+    /* Фон */
+    background-color: #f4f2f0;
+}
+
+.my-way-page__home {
+    /* Позиционирование */
+    position: absolute;
+    top: 2rem;
+    left: 4rem; /* Симметрично правому отступу у .my-way-page__contacts */
+
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
+    width: 70px;
+    height: 70px;
+
+    /* Прочее */
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект при наведении на иконку */
+.my-way-page__home:hover {
+    opacity: 0.7;
+    transform: scale(1.05); /* Легкое увеличение для интерактивности */
+}
+
+.my-way-page__home-icon {
+    /* Box model */
+    width: 100%;
+    height: 100%;
+    
+    /* Прочее */
+    object-fit: contain;
+}
+
+.my-way-page__contacts {
+    /* Позиционирование */
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+
+    /* Типографика */
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #a0a0a0;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.my-way-page__title-wrap {
+    /* Display & Flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    /* Box model */
+    margin-bottom: 2.5rem;
+    padding-left: 28rem;
+}
+
+.my-way-page__title {
+    /* Типографика */
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #593e22;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.my-way-page__title-line {
+    /* Box model */
+    width: 180px;
+    height: 2px;
+
+    /* Фон */
+    background-color: #593e22;
+    opacity: 0.5;
+}
+
+.my-way__content {
+    /* Display & Flex */
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.my-way__photo-wrap {
+    /* Box model */
+    width: 500px;
+    flex-shrink: 0;
+}
+
+.my-way__photo {
+    /* Box model */
+    width: 100%;
+    border-radius: 50px;
+
+    /* Прочее */
+    object-fit: cover;
+    display: block;
+}
+
+.my-way__content-text {
+    /* Display & Flex */
+    flex: 1;
+
+    /* Типографика */
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.85;
+    text-align: left;
+
+    /* Прочее */
+    white-space: pre-line;
+}
