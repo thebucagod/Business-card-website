@@ -73,9 +73,13 @@
 }
 
 /* Кнопка */
+/* Кнопка */
 .hero__btn {
     /* Display & Flex */
     display: inline-block;
+
+    /* Позиционирование */
+    position: relative;
 
     /* Box model */
     padding: 33px 15px;
@@ -95,6 +99,58 @@
     /* Прочее */
     transition: background 0.3s, opacity 0.3s;
     opacity: 0.8;
+}
+
+/* Звёздочка слева снизу */
+.hero__btn::before {
+    content: '';
+    
+    /* Позиционирование */
+    position: absolute;
+    bottom: -10px;
+    left: -17px;
+    
+    /* Box model */
+    width: 50px;
+    height: 50px;
+    
+    /* Фон */
+    background-image: url('../../assets/imgs/star.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Поверх всего */
+    z-index: 1;
+    
+    /* Чтобы клики проходили сквозь */
+    pointer-events: none;
+}
+
+/* Звёздочка справа сверху */
+.hero__btn::after {
+    content: '';
+    
+    /* Позиционирование */
+    position: absolute;
+    top: -17px;
+    right: -10px;
+    
+    /* Box model */
+    width: 50px;
+    height: 50px;
+    
+    /* Фон */
+    background-image: url('../../assets/imgs/star.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Поверх всего */
+    z-index: 1;
+    
+    /* Чтобы клики проходили сквозь */
+    pointer-events: none;
 }
 
 .hero__btn:hover {

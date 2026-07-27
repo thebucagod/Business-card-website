@@ -85,7 +85,7 @@
 
 .card-slide {
     /* Позиционирование — убираем absolute */
-    grid-area: 1 / 1;       /* ← все карточки в одну ячейку */
+    grid-area: 1 / 1;
 
     /* Display & Flex */
     display: flex;
@@ -180,4 +180,26 @@
 
 .card-slider__btn:hover {
     opacity: 0.7;
+}
+
+/* ============================================= */
+/* === КОРРЕКТИРОВКА 3 И 4 СЛАЙДОВ (УЗКИЕ ФОТО) === */
+/* ============================================= */
+/* Меняем layout слайда на grid для точного контроля колонок */
+.card-slide:nth-child(3),
+.card-slide:nth-child(4) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 0; /* Убираем общий отступ */
+    align-items: center;
+}
+
+.card-slide:nth-child(3) .card-slide__photo-wrap,
+.card-slide:nth-child(4) .card-slide__photo-wrap {
+    width: 100%;
+}
+
+.card-slide:nth-child(3) .card-slide__content,
+.card-slide:nth-child(4) .card-slide__content {
+    margin-left: -14%;
 }

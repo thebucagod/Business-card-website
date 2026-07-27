@@ -14,7 +14,7 @@
     /* Позиционирование */
     position: absolute;
     top: 2rem;
-    left: 4rem; /* Симметрично правому отступу у .my-way-page__contacts */
+    left: 4rem;
 
     /* Display & Flex */
     display: flex;

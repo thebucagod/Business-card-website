@@ -96,7 +96,7 @@
 
 .about__line {
     /* Box model */
-    width: 3px;
+    width: 1px;
     margin-right: 20px;
 
     /* Фон и границы */

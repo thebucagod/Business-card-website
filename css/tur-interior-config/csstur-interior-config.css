@@ -1,140 +1,142 @@
 .tur-page {
-    /* Box model */
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0 1.5rem 0;
+/* Box model */
+width: 100%;
+margin: 0 auto;
+padding: 2rem 0 1.5rem 0;
 
-    /* Фон */
-    background-color: #f4f2f0;
+/* Фон */
+background-color: #f4f2f0;
 }
 
 .tur-page__title-row {
-    /* Display & Flex */
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+/* Display & Flex */
+display: flex;
+align-items: center;
+gap: 3rem;
 
-    /* Box model */
-    margin-bottom: 3rem;
+/* Box model */
+margin-bottom: 3rem;
 }
 
 .tur-page__line {
-    /* Display & Flex */
-    flex: 1;
+/* Display & Flex */
+flex: 1;
 
-    /* Box model */
-    height: 2px;
+/* Box model */
+height: 2px;
 
-    /* Фон */
-    background: rgba(89, 62, 34, 0.6);
+/* Фон */
+background: rgba(89, 62, 34, 0.6);
 }
 
 .tur-page__title {
-    /* Типографика */
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    color: #593e22;
+/* Типографика */
+font-size: 3rem;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+color: #593e22;
 }
 
 .tur-page__desc {
-    /* Box model */
-    margin-bottom: 1.5rem;
+/* Box model */
+margin-bottom: 1.5rem;
 
-    /* Типографика */
-    font-size: 1.3rem;
-    text-align: center;
-    color: #593e22;
-    line-height: 1.8;
+/* Типографика */
+font-size: 1.3rem;
+text-align: center;
+color: #593e22;
+line-height: 1.8;
 }
 
-/* ============================================= */
-/* === ЧТО Я БЕРУ НА СЕБЯ === */
-/* ============================================= */
+/* ============================================= /
+/ === ЧТО Я БЕРУ НА СЕБЯ === /
+/ ============================================= */
 
 .what-i-take {
-    /* Display & Flex */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+/* Display & Flex */
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
 
-    /* Box model */
-    padding: 2rem 4rem 3rem;
+/* Box model */
+padding: 2rem 4rem 3rem;
 }
 
 .what-i-take__title {
-    /* Типографика */
-    font-size: 2.3rem;
-    font-weight: 300;
-    letter-spacing: 0.1em;
+/* Типографика */
+font-size: 2.3rem;
+font-weight: 300;
+letter-spacing: 0.1em;
 }
 
 .what-i-take__grid {
-    /* Display & Grid */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+/* Display & Grid */
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 1rem;
 
-    /* Box model */
-    width: 100%;
+/* Box model */
+width: 100%;
 }
 
 .what-i-take__col {
-    /* Display & Flex */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Display & Flex */
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100%;
 }
 
 .what-i-take__number {
-    /* Display & Flex */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Display & Flex */
+display: flex;
+align-items: center;
+justify-content: center;
 
-    /* Box model */
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
+/* Box model */
+width: 70px;
+height: 70px;
+margin-bottom: 1rem;
 
-    /* Рамка */
-    border: 1.5px solid black;
-    border-radius: 50%;
+/* Рамка */
+border: 1.5px solid black;
+border-radius: 50%;
 
-    /* Типографика */
-    font-size: 3rem;
-    font-weight: 200;
+/* Типографика */
+font-size: 3rem;
+font-weight: 200;
 }
 
 .what-i-take__col-title {
-    /* Box model */
-    margin-bottom: 2rem;
+/* Box model */
+margin-bottom: 2rem;
 
-    /* Типографика */
-    font-size: 1.5rem;
-    font-weight: 350;
-    color: #593e22;
-    text-align: center;
+/* Типографика */
+font-size: 1.5rem;
+font-weight: 350;
+color: #593e22;
+text-align: center;
 }
 
 .what-i-take__col-text {
-    /* Box model */
-    margin-bottom: 1.5rem;
+/* Box model */
+margin-bottom: 1.5rem;
 
-    /* Типографика */
-    font-size: 1.5rem;
-    font-weight: 350;
-    color: #593e22;
-    line-height: 1.2;
+/* Типографика */
+font-size: 1.5rem;
+font-weight: 350;
+color: #593e22;
+line-height: 1.2;
 }
 
 .what-i-take__icon {
-    /* Box model */
-    width: 56px;
-    height: 56px;
+/* Box model */
+width: 56px;
+height: 56px;
+margin-top: auto;
 
-    /* Прочее */
-    object-fit: contain;
+/* Прочее */
+object-fit: contain;
 }
