@@ -1,0 +1,118 @@
+/* ========================================
+   MY-PROJ-PAGE — project detail sections
+   ======================================== */
+
+.my-proj-page {
+    width: 100%;
+}
+
+/* ── shared section shell ── */
+.proj-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px 80px;
+    border-bottom: 1px solid #e8e3dc;
+}
+
+/* ── photo column ── */
+.proj-section__img-wrap {
+    flex: 0 0 auto;
+    width: 42%;
+    max-width: 530px;
+}
+
+.proj-section__img-wrap img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+}
+
+/* ── text column ── */
+.proj-section__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 8px;
+}
+
+/* main heading — thin/spaced caps, matching the mockups */
+.proj-section__title {
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* subtitle (used in section 2, 3, 5) */
+.proj-section__subtitle {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+/* body paragraphs */
+.proj-section__body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.proj-section__body p {
+    font-size: clamp(0.88rem, 1.1vw, 1rem);
+    line-height: 1.75;
+    text-align: justify;
+    margin: 0;
+}
+
+/* ── section 3: image is wider, takes left half ── */
+.proj-section--wide-img .proj-section__img-wrap {
+    width: 52%;
+    max-width: 650px;
+}
+
+.proj-section--wide-img .proj-section__img-wrap img {
+    height: 520px;
+    border-radius: 40px;
+}
+
+.my-way-page__home {
+    /* Позиционирование */
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+
+    /* Display & Flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
+    width: 70px;
+    height: 70px;
+
+    /* Прочее */
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.my-way-page__home-icon {
+    /* Box model */
+    width: 100%;
+    height: 100%;
+    
+    /* Прочее */
+    object-fit: contain;
+}
+
+/* Эффект при наведении на иконку */
+.my-way-page__home:hover {
+    opacity: 0.7;
+    transform: scale(1.05); /* Легкое увеличение для интерактивности */
+}

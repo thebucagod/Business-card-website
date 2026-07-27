@@ -1,0 +1,65 @@
+/* ========================================
+   MY-PROJ-PAGE — responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .proj-section {
+        padding: 60px 48px;
+        gap: 40px;
+    }
+
+    .proj-section__img-wrap {
+        width: 46%;
+    }
+
+    .proj-section__img-wrap img {
+        height: 380px;
+    }
+
+    .proj-section--wide-img .proj-section__img-wrap {
+        width: 50%;
+    }
+
+    .proj-section--wide-img .proj-section__img-wrap img {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proj-section {
+        flex-direction: column !important;
+        padding: 48px 24px;
+        gap: 28px;
+    }
+
+    .proj-section__img-wrap,
+    .proj-section--wide-img .proj-section__img-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .proj-section__img-wrap img,
+    .proj-section--wide-img .proj-section__img-wrap img {
+        height: 280px;
+        border-radius: 8px;
+    }
+
+    .proj-section__content {
+        padding-top: 0;
+    }
+
+    .proj-section__body p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .proj-section {
+        padding: 36px 16px;
+    }
+
+    .proj-section__img-wrap img,
+    .proj-section--wide-img .proj-section__img-wrap img {
+        height: 220px;
+    }
+}
