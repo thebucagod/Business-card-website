@@ -53,7 +53,7 @@
     position: relative;
 
     /* Box model */
-    padding: 6.75rem 0 11.5rem 0;
+    padding: 6.75rem 0 6rem 0;
 }
 
 .service-row-1 {
@@ -93,6 +93,32 @@
     font-size: 1.7rem;
 }
 
+.service-row__btn {
+    /* Позиционирование */
+    position: relative;
+    z-index: 3;
+
+    /* Display & Flex */
+    display: inline-block;
+
+    /* Box model */
+    margin-top: 2.5rem;
+    padding: 0.75rem 1.5rem;
+
+    /* Типографика */
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+
+    /* Фон и границы */
+    border: 1px solid #593e22;
+    border-radius: 30px;
+
+    /* Прочее */
+    transition: all 0.3s ease;
+}
+
 .service-row__image-link {
     /* Позиционирование */
     position: absolute;
@@ -115,7 +141,7 @@
 /* Ряд 1 — service1 справа от текста */
 .service-row__image-link--1 {
     /* Позиционирование */
-    top: -60px;
+    top: -70px;
     right: 5%;
 
     /* Box model */
@@ -137,7 +163,7 @@
 /* Ряд 3 — service3 справа от текста */
 .service-row__image-link--3 {
     /* Позиционирование */
-    top: -100px;
+    top: -50px;
     right: 1%;
 
     /* Box model */
