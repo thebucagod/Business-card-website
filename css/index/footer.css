@@ -114,23 +114,25 @@
 }
 
 .footer__contacts {
-    /* Box model */
-    margin-right: 10rem;
-    height: 210px;
-
     /* Display & Flex */
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 3rem;
+    
+    /* Box model */
+    height: auto; 
+    margin-right: 10rem;
 }
 
 .footer__contacts-line {
     /* Box model */
     width: 12px;
-
+    align-self: stretch; 
+    
     /* Фон */
     background: #baa286;
     opacity: 0.85;
+    border-radius: 2px;
 }
 
 .footer__contacts-list {
@@ -141,6 +143,8 @@
 
     /* Прочее */
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footer__contacts-item {
@@ -169,4 +173,34 @@
 
 .footer__link:hover {
     text-decoration: underline;
+}
+
+/* === СТИЛИ ДЛЯ СОЦСЕТЕЙ === */
+.footer__socials {
+    /* Box model */
+    width: 100%; 
+    
+    /* Display & Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* Box model */
+    margin-top: 2.5rem;
+}
+
+.footer__social-icon {
+    /* Box model */
+    width: 40px;
+    height: 40px;
+
+    /* Прочее */
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer__social-link:hover .footer__social-icon {
+    opacity: 0.7;
+    transform: translateY(-3px);
 }
