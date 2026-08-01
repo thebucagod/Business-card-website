@@ -4,7 +4,7 @@
 
 .header {
     /* Box model */
-    height: 140px;
+    height: 15dvh;
     padding: 0 5%;
 
     /* Фон и границы */

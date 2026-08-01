@@ -9,6 +9,7 @@
     /* Box model */
     padding-top: 200px;
     padding-bottom: 180px;
+    max-height: 100dvh;
 
     /* Фон */
     background: white;
