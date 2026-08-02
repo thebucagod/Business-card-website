@@ -7,15 +7,15 @@
     position: relative;
 
     /* Box model */
-    padding-top: 200px;
-    padding-bottom: 180px;
-    max-height: 100dvh;
+    padding-top: 180px;
+    padding-bottom: 50px;
+    min-height: 100dvh;
 
     /* Фон */
     background: white;
 
     /* Прочее */
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .footer__curtain {
@@ -24,7 +24,7 @@
     top: 0;
 
     /* Box model */
-    height: auto;
+    max-height: 100dvh;
 }
 
 .footer__curtain--left {
@@ -117,6 +117,7 @@
 .footer__contacts {
     /* Display & Flex */
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 3rem;
     
@@ -159,6 +160,7 @@
     /* Box model */
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
 
     /* Прочее */
     object-fit: contain;
