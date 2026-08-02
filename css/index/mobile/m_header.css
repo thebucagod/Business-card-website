@@ -1,0 +1,195 @@
+@media (max-width: 768px) {
+
+    .header {
+        /* Box model */
+        height: 12dvh;
+        padding: 0 5%;
+
+        /* Фон и границы */
+        background-color: #f2ebe1;
+
+        /* Display & Flex */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Позиционирование */
+        position: relative;
+        z-index: 200;
+    }
+
+    /* Прячем десктопный nav */
+    .header__nav {
+        display: none;
+    }
+
+    /* --- Бургер --- */
+    .header__burger {
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        /* Box model */
+        padding: 8px;
+
+        /* Фон */
+        background: none;
+        border: none;
+
+        /* Прочее */
+        cursor: pointer;
+    }
+
+    .header__burger-icon {
+        /* Display */
+        display: block;
+
+        /* Box model */
+        width: 24px;
+        height: 2px;
+
+        /* Фон */
+        background: #201408;
+    }
+
+    /* --- Оверлей (закрыт по умолчанию) --- */
+    .header__mobile-overlay {
+        /* Позиционирование */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 300;
+
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+
+        /* Box model */
+        width: 100%;
+        height: 100dvh;
+        padding: 0 5%;
+
+        /* Фон */
+        background: #F5EEE6;
+
+        /* Прочее */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Оверлей открыт */
+    .header__mobile-overlay.is-open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* --- Верхняя строка оверлея: лого + крестик --- */
+    .header__mobile-top {
+        /* Display & Flex */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Box model */
+        height: 12dvh;
+    }
+
+    .header__mobile-logo {
+        /* Box model */
+        max-height: 80%;
+        max-width: 100%;
+        display: block; 
+
+        /* Прочее */
+        object-fit: contain;
+    }
+
+    .header__close {
+        /* Box model */
+        padding: 8px;
+
+        /* Фон */
+        background: none;
+        border: none;
+
+        /* Типографика */
+        font-size: 1.6rem;
+        color: #201408;
+
+        /* Прочее */
+        cursor: pointer;
+    }
+
+    /* --- Пункты меню --- */
+    .header__mobile-nav {
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        /* Box model */
+        margin-top: 3rem;
+    }
+
+    .header__mobile-link {
+        /* Типографика */
+        font-family: 'Evolventa', sans-serif;
+        font-size: clamp(1.2rem, 4vw, 1.6rem);
+        text-decoration: none;
+        color: #433f35cc;
+
+        /* Прочее */
+        transition: color 0.3s;
+    }
+
+    .header__mobile-link:hover {
+        color: #A0A0A0;
+    }
+
+    /* --- Контакты внизу --- */
+    .header__mobile-contacts {
+        /* Display & Flex */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        /* Box model */
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .header__mobile-contact {
+        /* Display & Flex */
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        /* Типографика */
+        font-family: 'Evolventa', sans-serif;
+        font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+        color: #A0A0A0;
+        text-decoration: none;
+    }
+
+    .header__mobile-contact-icon {
+        /* Box model */
+        width: 16px;
+        height: 16px;
+
+        /* Прочее */
+        object-fit: contain;
+        opacity: 0.6;
+    }
+
+    .header__mobile-contact-divider {
+        /* Типографика */
+        color: #A0A0A0;
+        font-size: 1rem;
+    }
+
+}

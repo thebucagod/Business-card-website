@@ -24,6 +24,7 @@
 
     <meta property="og:image" content="https://thebucagod.github.io/Business-card-website/assets/imgs/hero-bg.webp">
     
+    <!-- DEKSTOP STYLES -->
     <link rel="stylesheet" href="css/index/reset.css">
     <link rel="stylesheet" href="css/index/header.css">
     <link rel="stylesheet" href="css/index/hero.css">
@@ -34,6 +35,16 @@
     <link rel="stylesheet" href="css/index/reviews.css">
     <link rel="stylesheet" href="css/index/footer.css">
     <link rel="stylesheet" href="css/index/responsive.css">
+
+    <!-- MOBILE STYLES -->
+    <link rel="stylesheet" href="css/index/mobile/m_header.css">
+    <link rel="stylesheet" href="css/index/mobile/m_hero.css">
+    <link rel="stylesheet" href="css/index/mobile/m_what-i-do.css">
+    <link rel="stylesheet" href="css/index/mobile/m_process.css">
+    <link rel="stylesheet" href="css/index/mobile/m_about.css">
+    <link rel="stylesheet" href="css/index/mobile/m_projects.css">
+    <link rel="stylesheet" href="css/index/mobile/m_reviews.css">
+    <link rel="stylesheet" href="css/index/mobile/m_footer.css">
 
     <link rel="preload" as="image" href="assets/imgs/hero-bg.webp">
     <link rel="icon" href="assets/imgs/favicon.ico">
@@ -62,7 +73,7 @@
 
 <body>
     <header class="header">
-        <!-- Услуги, Наши работы, Логотип, Обо мне, Контакаты -->
+        <!-- Услуги, Наши работы, Логотип, Обо мне, Контакты -->
         <nav class = "header__nav">
             <a href = "#what-i-do" class = "header__nav-link">УСЛУГИ</a>
             <a href = "#about" class = "header__nav-link">ОБО МНЕ</a>
@@ -70,6 +81,42 @@
             <a href = "#projects" class = "header__nav-link">НАШИ РАБОТЫ</a>
             <a href = "#contacts" class = "header__nav-link">КОНТАКТЫ</a>            
         </nav>
+
+        <!-- MOBILE NAVIGATION -->
+        <!-- Бургер-кнопка -->
+        <img src="assets/imgs/logo.png" alt = "Мастерская Чулпан Ханнановой" class = "header__mobile-logo">
+
+        <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+            <span class="header__burger-icon"></span>
+            <span class="header__burger-icon"></span>
+            <span class="header__burger-icon"></span>
+        </button>
+
+        <!-- Мобильное меню-оверлей -->
+        <div class="header__mobile-overlay" aria-hidden="true">
+            <div class="header__mobile-top">
+                <img src="assets/imgs/logo.png" alt="Мастерская Чулпан Ханнановой" class="header__mobile-logo">
+                <button class="header__close" aria-label="Закрыть меню">✕</button>
+            </div>
+
+            <nav class="header__mobile-nav">
+                <a href="#what-i-do" class="header__mobile-link">Услуги</a>
+                <a href="#projects"   class="header__mobile-link">Наши работы</a>
+                <a href="#about"      class="header__mobile-link">Обо мне</a>
+            </nav>
+
+            <div class="header__mobile-contacts">
+                <a href="tel:+79178968989" class="header__mobile-contact">
+                    <img src="assets/imgs/icon-phone.png" alt="" class="header__mobile-contact-icon">
+                    +7 (917) 896-89-89
+                </a>
+                <span class="header__mobile-contact-divider">|</span>
+                <a href="mailto:SHIK116@yandex.ru" class="header__mobile-contact">
+                    <img src="assets/imgs/icon-email.png" alt="" class="header__mobile-contact-icon">
+                    shik116@yandex.ru
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -388,5 +435,6 @@
     </footer>
 
     <script src="js/process.js"></script>
+    <script src="js/mobile/index-mobile-menu.js"></script>
 </body>
 </html>
