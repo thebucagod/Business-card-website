@@ -119,6 +119,10 @@
     transition: all 0.3s ease;
 }
 
+.service-row__btn-icon {
+    display: none;
+}
+
 .service-row__image-link {
     /* Позиционирование */
     position: absolute;
@@ -135,7 +139,6 @@
 
     /* Прочее */
     overflow: hidden;
-    object-fit: cover;
 }
 
 /* Ряд 1 — service1 справа от текста */

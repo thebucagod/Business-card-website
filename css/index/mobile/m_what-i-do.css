@@ -1,0 +1,225 @@
+@media (max-width: 768px) {
+    .what-i-do {
+        /* Позиционирование */
+        position: relative;
+
+        /* Box model */
+        padding: 4rem 1rem;
+
+        /* Типографика */
+        color: black;
+    }
+
+    .what-i-do__title {
+        /* Box model */
+        margin-left: 0;
+
+        /* Типографика */
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+
+    .what-i-do__subtitle {
+        /* Box model */
+        margin-left: 0;
+
+        /* Типографика */
+        font-size: 1.5rem;
+    }
+
+    .what-i-do__meta {
+        /* Box model */
+        margin: 2.5rem 0 2.5rem 0;
+
+        /* Типографика */
+        font-size: 1.2rem;
+    }
+
+    .what-i-do__year {
+        /* Фон и границы */
+        border: 1px solid #593e22;
+        border-radius: 100px;
+    }
+
+    .service-row {
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        /* Box model */
+        margin: 0 0 5rem 0;
+        padding: 0;
+    }
+
+    .service-row__text {
+        /* Типографика */
+        text-align: left;
+        
+        /* Прочее */
+        order: 2;
+    }
+
+    .service-row__image-link {
+        /* Позиционирование */
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+
+        /* Box model */
+        width: 100%;
+        max-width: none;
+        margin: 0 0 1rem 0;
+
+        /* Прочее */
+        order: 1;
+    }
+
+    .service-row__image-link--1,
+    .service-row__image-link--2,
+    .service-row__image-link--3 {
+        /* Позиционирование */
+        top: auto;
+        left: auto;
+        right: auto;
+
+        /* Box model */
+        width: 100%;
+        max-width: none;
+    }
+
+    .divider {
+        /* Прочее */
+        display: none;
+    }
+
+    .service-row__title {
+        /* Box model */
+        margin-bottom: 1rem;
+
+        /* Типографика */
+        font-weight: 350;
+        font-size: 1.7rem;
+    }
+
+    .service-row__desc {
+        /* Типографика */
+        font-size: 1.5rem;
+    }
+
+    .service-row__list {
+        /* Box model */
+        margin-top: 3rem;
+
+        /* Типографика */
+        font-size: 1.5rem;
+    }
+
+    .service-row__btn {
+        /* Позиционирование */
+        position: relative;
+        z-index: 0;
+
+        /* Display & Flex */
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55em;
+
+        /* Box model */
+        margin-top: 2.5rem;
+        padding: 0;
+        min-height: 44px;
+
+        /* Типографика */
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: inherit;
+
+        /* Фон и границы */
+        border: 0 solid #593e22;
+        border-radius: 0;
+
+        /* Прочее */
+        transition: all 0.3s ease;
+    }
+
+    .service-row__btn-icon {
+        display: block;
+        height: 1.5em;
+        width: auto;
+        flex: 0 0 auto;
+    }
+
+
+    .service-row__image {
+        /* Display & Flex */
+        display: block;
+
+        /* Box model */
+        width: 100%;
+        height: 100%;
+
+        /* Прочее */
+        object-fit: contain;
+    }
+
+    .service-row__overlay {
+        display: none;
+    }
+
+    .service-row__image-link:hover .service-row__overlay {
+        height: 100%;
+    }
+
+    .service-row__overlay-text {
+        /* Типографика */
+        color: white;
+        font-size: 1.1rem;
+
+        /* Прочее */
+        opacity: 0;
+        transition: opacity 0.4s ease 0.15s;
+    }
+
+    .service-row__image-link:hover .service-row__overlay-text {
+        opacity: 1;
+    }
+
+    .service-row__overlay-line {
+        /* Box model */
+        width: 60px;
+        height: 1px;
+
+        /* Фон и границы */
+        background: white;
+
+        /* Прочее */
+        opacity: 0;
+        transition: opacity 0.4s ease 0.25s;
+    }
+
+    .service-row__image-link:hover .service-row__overlay-line {
+        opacity: 1;
+    }
+
+    .divider {
+        /* Позиционирование */
+        position: absolute;
+        z-index: 1;
+
+        /* Фон и границы */
+        background: #593e22;
+    }
+
+    .divider--horizontal {
+        /* Box model */
+        height: 1px;
+    }
+
+    .divider--vertical {
+        /* Box model */
+        width: 1px;
+    }
+}
