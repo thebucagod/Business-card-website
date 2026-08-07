@@ -10,6 +10,10 @@
     background-color: #f8f7f6;
 }
 
+.process__step-desc {
+    display: none;
+}
+
 .process__title {
     /* Типографика */
     font-size: 3rem;

@@ -1,0 +1,61 @@
+@media (max-width: 768px) {
+    /* === PROCESS === */
+    .process__subtitle {
+        margin-bottom: 3rem;
+    }
+
+    .process__content {
+        display: none;
+    }
+
+    .process__steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 1.5rem;
+        width: 100%;
+        counter-reset: process-step;
+    }
+
+    .process__step {
+        align-items: center;
+        padding: 0;
+        cursor: default;
+        counter-increment: process-step;
+    }
+
+    /* Единый цвет всех шагов, без активного */
+    .process__step--active {
+        color: inherit;
+    }
+
+    /* Номера 01.–05. без изменения разметки */
+    .process__step::before {
+        content: counter(process-step, decimal-leading-zero) ".";
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        opacity: 0.6;
+        margin-bottom: 0.75rem;
+    }
+
+    .process__step-name {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        /* при необходимости — серифный шрифт заголовков по макету */
+    }
+
+    .process__step-desc {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: justify;
+    }
+
+    /* Пятый шаг — по центру на всю ширину */
+    .process__step:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 26rem;
+    }
+}
