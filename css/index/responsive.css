@@ -136,12 +136,38 @@
     }
 
     /* === ABOUT === */
+    .about__inner {
+        /* Display & Flex/Grid */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about__text {
+        /* Display & Flex/Grid */
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 1.4rem;
+
+        /* Box model */
+        padding-top: 7rem;
+        margin-left: 50px;
+        margin-bottom: 5rem;
+    }
+
+    .about__title {
+        /* Box model */
+        margin-top: 0;
+    }
+
+    .about__btn {
+        /* Display & Flex/Grid */
+        align-self: center;
+    }
 
     .about__photo-wrap,
     .about__deco {
+        /* Display & Flex/Grid */
         display: none;
-    }
-    .about__text {
-        margin-bottom: 5rem;
     }
 }

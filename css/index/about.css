@@ -3,59 +3,79 @@
 /* ============================================= */
 
 .about {
-    /* Фон и границы */
+    /* Позиционирование */
     position: relative;
+
+    /* Фон и границы */
     background-color: #f4f2f0;
 }
 
 .about__inner {
-    /* Display & Flex */
-    display: flex;
-    flex-direction: row;
+    /* Display & Flex/Grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    grid-template-rows: repeat(5, auto);
     align-items: stretch;
+    row-gap: 1.4rem;
+
+    /* Позиционирование */
     z-index: 1;
 }
 
+.about__text {
+    /* Display & Flex/Grid */
+    display: contents;
+}
+
 .about__photo-wrap {
-    /* Display & Flex */
-    flex: 1;
+    /* Display & Flex/Grid */
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
     display: flex;
     justify-content: flex-end;
 
     /* Box model */
-    padding: 7rem 0;
     box-sizing: border-box;
+    padding: 7rem 0;
+    margin-right: 50px;
 }
 
 .about__photo {
+    /* Display & Flex/Grid */
+    display: block;
+
     /* Box model */
     width: 90%;
 
     /* Прочее */
     object-fit: cover;
-    display: block;
 }
 
-.about__text {
-    /* Display & Flex */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    gap: 1.4rem;
-
-    /* Box model */
-    padding-top: 7rem;
-    margin-left: 50px;
+.about__title,
+.about__desc,
+.about__sec-title,
+.about__list,
+.about__btn {
+    /* Display & Flex/Grid */
+    grid-column: 2 / 3;
 }
 
 .about__title {
+    /* Display & Flex/Grid */
+    grid-row: 1;
+
     /* Типографика */
     font-size: 5rem;
     font-weight: 300;
+
+    /* Box model */
+    margin-top: 7rem;
 }
 
 .about__desc {
+    /* Display & Flex/Grid */
+    grid-row: 2;
+
     /* Типографика */
     font-size: 2rem;
 
@@ -64,12 +84,18 @@
 }
 
 .about__sec-title {
+    /* Display & Flex/Grid */
+    grid-row: 3;
+
     /* Типографика */
     font-size: 4rem;
     font-weight: 300;
 }
 
 .about__list {
+    /* Display & Flex/Grid */
+    grid-row: 4;
+
     /* Типографика */
     font-size: 2rem;
 
@@ -78,9 +104,13 @@
 }
 
 .about__btn {
-    /* Display & Flex */
+    /* Display & Flex/Grid */
+    grid-row: 5;
     display: inline-block;
-    align-self: center;
+    justify-self: center;
+
+    /* Box model */
+    margin-bottom: 7rem;
 
     /* Типографика */
     padding: 20px 20px;
@@ -88,26 +118,37 @@
     color: white;
     font-size: 1.5rem;
 
-    /* Прочее */
+    /* Фон и границы */
     border-radius: 50px;
     background-color: #201408;
+
+    /* Прочее */
     opacity: 0.8;
 }
 
 .about__line {
+    /* Display & Flex/Grid */
+    grid-column: 4 / 5;
+    grid-row: 1 / -1;
+    align-self: stretch;
+
     /* Box model */
     width: 1px;
     margin-right: 20px;
 
     /* Фон и границы */
     background: currentColor;
-    opacity: 0.4;
+    border-radius: 20px;
 
     /* Прочее */
-    border-radius: 20px;
+    opacity: 0.4;
 }
 
+/* Важно: после .about__line, чтобы перебила колонку */
 .about__line-first {
+    /* Display & Flex/Grid */
+    grid-column: 3 / 4;
+
     /* Box model */
     margin-right: 15px;
 }
@@ -126,12 +167,5 @@
     opacity: 0.35;
 }
 
-.about__deco--top {
-    top: 0;
-    left: 0;
-}
-
-.about__deco--bottom {
-    bottom: 0;
-    left: 0;
-}
+.about__deco--top { top: 0; left: 0; }
+.about__deco--bottom { bottom: 0; left: 0; }
