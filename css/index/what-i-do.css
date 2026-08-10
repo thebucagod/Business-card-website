@@ -56,6 +56,13 @@
     padding: 6.75rem 0 6rem 0;
 }
 
+.service-row__text {
+    position: relative;
+    z-index: 2;
+}
+.service-row-1 .service-row__text { margin-right: calc(24vw + 8%); }
+.service-row-3 .service-row__text { margin-right: calc(37vw + 5%); }
+
 .service-row-1 {
     /* Box model */
     margin-left: 26%;

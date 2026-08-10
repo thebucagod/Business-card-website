@@ -22,6 +22,9 @@
         text-align: center;
     }
 
+    .service-row-1 .service-row__text { margin-right: 0 }
+    .service-row-3 .service-row__text { margin-right: 0 }
+
     .service-row__image-link {
         /* Позиционирование */
         position: relative;
