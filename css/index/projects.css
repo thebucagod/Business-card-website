@@ -29,6 +29,10 @@
   opacity: 0.5;
 }
 
+.projects__arrow {
+  display: none;
+}
+
 .projects__grid {
   display: flex;
   gap: 16px;

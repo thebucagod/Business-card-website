@@ -1,0 +1,163 @@
+/* ============================================= */
+/* === PROJECTS — МОБИЛЬНАЯ ВЕРСИЯ (≤768px) === */
+/* ============================================= */
+@media (max-width: 768px) {
+
+    .projects {
+        padding: 32px 0 0;
+    }
+
+    .projects__title {
+        padding: 0 5%;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects__title--text {
+        font-size: 1.7rem;
+    }
+
+    /* Логотип скрываем */
+    .projects__logo {
+        display: none;
+    }
+
+    .projects__carousel {
+        position: relative;
+    }
+
+    .projects__arrow {
+        position: absolute;
+        top: 31vh;
+        top: 31dvh;
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+
+        border: none;
+        border-radius: 100%;
+        
+        background: transparent; 
+        box-shadow: none;                 
+        outline: none;                    
+        appearance: none;
+        -webkit-appearance: none;
+
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 0.15s ease;
+    }
+
+    .projects__arrow:focus,
+    .projects__arrow:focus-visible {
+        outline: none;
+    }
+
+    .projects__arrow:active {
+        transform: scale(0.92);
+    }
+
+    .projects__arrow img {
+        width: 22px;
+        height: 22px;
+        pointer-events: none;
+        user-select: none;
+        border: 1px solid white;
+        border-radius: 100%;
+    }
+
+    .projects__arrow--left  { left: 12px; }
+    .projects__arrow--right { right: 12px; }
+
+    /* Галерея: горизонтальный свайп, одна карточка на экран */
+    .projects__grid {
+        flex-direction: row;
+        gap: 0;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .projects__grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* «Распаковываем» карточки 1–4 в общий поток скролла */
+    .projects__left {
+        display: contents;
+    }
+
+    .projects__card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always; /* свайп строго по одной карточке */
+
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+
+        background-color: #ffffff;
+        background-size: 0 0; /* собственный фон карточки скрыт, фото перенесено на ::before */
+    }
+
+    /* Фото отдельным блоком, 60–70dvh */
+    .projects__card::before {
+        content: '';
+        flex: 0 0 62vh;
+        flex-basis: 62dvh;
+        background-image: inherit; /* подхватывает url() из классов --1 … --5 */
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Убираем тёмный градиент поверх фото */
+    .projects__card::after {
+        display: none;
+    }
+
+    /* Текст под фото, на белом фоне — не поверх изображения */
+    .projects__card-text {
+        padding: 20px 6% 12px;
+        color: #363636;
+        font-size: 1rem;
+        background: #ffffff;
+    }
+
+    /* Отключаем скрытие текста при «ховере» (тапе) на сенсорах */
+    .projects__card:hover .projects__card-text {
+        opacity: 1;
+    }
+
+    /* Кнопка «Подробнее» под текстом */
+    .projects__overlay {
+        position: static;
+        height: auto;
+        margin-top: auto;
+        padding: 24px 6% 32px;
+
+        background: #ffffff;
+        clip-path: none;
+        transition: none;
+        justify-content: flex-start;
+    }
+
+    .projects__overlay-text {
+        opacity: 1;
+        transform: none;
+
+        display: inline-block;
+        padding: 12px 30px;
+        border: 1px solid #363636;
+        border-radius: 999px;
+
+        color: #363636;
+        font-size: 1rem;
+    }
+}
