@@ -113,3 +113,170 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mq.matches) buildLoop();
 });
+
+/* ================================================= */
+/* === Зацикленная карусель «ОТЗЫВЫ» (≤768px) === */
+/* ================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('.reviews__grid');
+    if (!grid) return;
+
+    const prevBtn  = document.querySelector('.reviews__arrow--left');
+    const nextBtn  = document.querySelector('.reviews__arrow--right');
+    const dots     = document.querySelectorAll('.reviews__dot');
+    const mq       = window.matchMedia('(max-width: 768px)');
+
+    let slidesCount = 0;
+    let scrollTimer = null;
+    let revealTimer = null;
+    let resizeTimer = null;
+
+    const slideWidth   = () => grid.clientWidth;
+    const currentIndex = () => Math.round(grid.scrollLeft / slideWidth());
+
+    /* Мгновенный переход к слайду */
+    function jumpTo(index) {
+        grid.style.scrollSnapType = 'none';
+        grid.scrollTo({ left: index * slideWidth(), behavior: 'auto' });
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                grid.style.scrollSnapType = '';
+            });
+        });
+    }
+
+    /* Преобразование индекса карусели в индекс оригинального слайда */
+    function toRealIndex(i) {
+        if (i <= 0) return slidesCount - 1;
+        if (i >= slidesCount + 1) return 0;
+        return i - 1;
+    }
+
+    /* Обновление активной точки */
+    function updateDots() {
+        if (!dots.length) return;
+        const realIndex = toRealIndex(currentIndex());
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('reviews__dot--active', idx === realIndex);
+        });
+    }
+
+    /* Сброс всех активных карточек и таймеров */
+    function resetAllCards() {
+        clearTimeout(revealTimer);
+        grid.querySelectorAll('.reviews__card--active').forEach((card) => {
+            card.classList.remove('reviews__card--active');
+        });
+    }
+
+    /* Запуск таймера для текущей активной карточки */
+    function scheduleReveal(delay = 3000) {
+        clearTimeout(revealTimer);
+        revealTimer = setTimeout(() => {
+            const i = currentIndex();
+            const cards = grid.querySelectorAll('.reviews__card');
+            if (i >= 0 && i < cards.length) {
+                cards[i].classList.add('reviews__card--active');
+            }
+        }, delay);
+    }
+
+    /* Клонирование первого и последнего слайдов */
+    function buildLoop() {
+        if (grid.querySelector('.reviews__card--clone')) return;
+
+        const slides = grid.querySelectorAll('.reviews__card');
+        if (slides.length < 2) return;
+
+        slidesCount = slides.length;
+
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone  = slides[slidesCount - 1].cloneNode(true);
+
+        [firstClone, lastClone].forEach((clone) => {
+            clone.classList.add('reviews__card--clone');
+            clone.setAttribute('aria-hidden', 'true');
+            clone.tabIndex = -1;
+        });
+
+        grid.appendChild(firstClone);
+        grid.prepend(lastClone);
+
+        jumpTo(1);
+        updateDots();
+        scheduleReveal();
+    }
+
+    function destroyLoop() {
+        resetAllCards();
+        grid.querySelectorAll('.reviews__card--clone').forEach((c) => c.remove());
+        grid.style.scrollSnapType = '';
+        grid.scrollLeft = 0;
+    }
+
+    /* При скролле — сбрасываем и обновляем после остановки */
+    grid.addEventListener('scroll', () => {
+        if (!mq.matches) return;
+        
+        resetAllCards();
+        updateDots();
+
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            scheduleReveal();
+        }, 150);
+    }, { passive: true });
+
+    /* Стрелки */
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (!mq.matches) return;
+            resetAllCards();
+            grid.scrollBy({ left: -slideWidth(), behavior: 'smooth' });
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (!mq.matches) return;
+            resetAllCards();
+            grid.scrollBy({ left: slideWidth(), behavior: 'smooth' });
+        });
+    }
+
+    /* Клики по точкам */
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            if (!mq.matches) return;
+            resetAllCards();
+            jumpTo(idx + 1);
+            updateDots();
+            scheduleReveal();
+        });
+    });
+
+    /* Resize */
+    window.addEventListener('resize', () => {
+        if (!mq.matches) return;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const i = Math.min(Math.max(currentIndex(), 1), slidesCount);
+            jumpTo(i);
+            updateDots();
+            scheduleReveal();
+        }, 150);
+    });
+
+    /* Breakpoint */
+    function handleBreakpoint(e) {
+        if (e.matches) buildLoop();
+        else destroyLoop();
+    }
+
+    if (typeof mq.addEventListener === 'function') {
+        mq.addEventListener('change', handleBreakpoint);
+    } else {
+        mq.addListener(handleBreakpoint);
+    }
+
+    if (mq.matches) buildLoop();
+});

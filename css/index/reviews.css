@@ -92,3 +92,13 @@
 .reviews__card:hover .reviews__review-photo {
     opacity: 1;
 }
+
+/* Стрелки скрыты по умолчанию — появляются только на мобильной */
+.reviews__arrow {
+    display: none;
+}
+
+/* Точки скрыты по умолчанию */
+.reviews__dots {
+    display: none;
+}
