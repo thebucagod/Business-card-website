@@ -31,18 +31,12 @@
     /* Позиционирование */
     left: 0;
     z-index: 0;
-
-    /* Box model */
-    width: clamp(200px, 9%, 240px);
 }
 
 .footer__curtain--right {
     /* Позиционирование */
     right: 0;
     z-index: 3;
-
-    /* Box model */
-    width: clamp(240px, 11%, 280px);
 }
 
 .footer__contacts-bar {
