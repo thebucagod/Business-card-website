@@ -1,179 +1,176 @@
 /* ============================================= */
-/* === FOOTER === */
+/* === FOOTER MOBILE === */
 /* ============================================= */
+@media (max-width: 768px) {
+    .footer {
+        /* Позиционирование */
+        position: relative;
 
-.footer {
-    /* Позиционирование */
-    position: relative;
+        /* Box model */
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 50dvh;
 
-    /* Box model */
-    padding-top: 50px;
-    padding-bottom: 50px;
-    min-height: 50dvh;
+        /* Фон */
+        background: white;
 
-    /* Фон */
-    background: white;
+        /* Прочее */
+        overflow-x: hidden;
+    }
 
-    /* Прочее */
-    overflow-x: hidden;
-}
+    .footer__contacts-bar {
+        /* Box model */
+        width: 100%;
+        padding: 2rem 0;
 
-.footer__curtain {
-    display: none;
-}
+        /* Позиционирование */
+        z-index: 1;
 
-.footer__contacts-bar {
-    /* Box model */
-    width: 100%;
-    padding: 2rem 0;
+        /* Фон */
+        background: #ddd3c6;
 
-    /* Позиционирование */
-    z-index: 1;
+        /* Прочее */
+        position: relative;
+    }
 
-    /* Фон */
-    background: #ddd3c6;
+    .footer__title {
+        /* Типографика */
+        font-size: 2rem;
+        font-weight: 200;
+        text-align: center;
+        color: #593e22;
+    }
 
-    /* Прочее */
-    position: relative;
-}
+    .footer__body {
+        /* Позиционирование */
+        position: relative;
+        z-index: 2;
 
-.footer__title {
-    /* Типографика */
-    font-size: 2rem;
-    font-weight: 200;
-    text-align: center;
-    color: #593e22;
-}
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.footer__body {
-    /* Позиционирование */
-    position: relative;
-    z-index: 2;
+        /* Box model */
+        padding-top: 2.5rem;
+    }
 
-    /* Display & Flex */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .footer__tagline {
+        /* Box model */
+        margin-bottom: 0.5rem;
 
-    /* Box model */
-    padding-top: 2.5rem;
-}
+        /* Типографика */
+        font-size: 1.7rem;
+        text-align: center;
+        color: #593e22;
+    }
 
-.footer__tagline {
-    /* Box model */
-    margin-bottom: 0.5rem;
+    .footer__tagline-line {
+        /* Box model */
+        width: 27rem;
+        height: 2px;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
 
-    /* Типографика */
-    font-size: 1.7rem;
-    text-align: center;
-    color: #593e22;
-}
+        /* Фон */
+        background: #898179;
+        opacity: 0.8;
+    }
 
-.footer__tagline-line {
-    /* Box model */
-    width: 27rem;
-    height: 2px;
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
+    .footer__subtitle {
+        /* Box model */
+        margin-bottom: 3rem;
 
-    /* Фон */
-    background: #898179;
-    opacity: 0.8;
-}
+        /* Типографика */
+        font-size: 1.5rem;
+        text-align: center;
+        color: #593e22;
+    }
 
-.footer__subtitle {
-    /* Box model */
-    margin-bottom: 3rem;
+    .footer__contacts {
+        /* Display & Flex */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 3rem;
+        
+        /* Box model */
+        height: auto; 
+        margin-right: 0;
+    }
 
-    /* Типографика */
-    font-size: 1.5rem;
-    text-align: center;
-    color: #593e22;
-}
+    .footer__contacts-line {
+        display: none;
+    }
 
-.footer__contacts {
-    /* Display & Flex */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 3rem;
-    
-    /* Box model */
-    height: auto; 
-    margin-right: 0;
-}
+    .footer__contacts-list {
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
 
-.footer__contacts-line {
-    display: none;
-}
+        /* Прочее */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.footer__contacts-list {
-    /* Display & Flex */
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    .footer__contacts-item {
+        /* Display & Flex */
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-    /* Прочее */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    .footer__icon {
+        /* Box model */
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
 
-.footer__contacts-item {
-    /* Display & Flex */
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+        /* Прочее */
+        object-fit: contain;
+    }
 
-.footer__icon {
-    /* Box model */
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+    .footer__link {
+        /* Типографика */
+        font-size: 1.2rem;
+        color: #593e22;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+    }
 
-    /* Прочее */
-    object-fit: contain;
-}
+    .footer__link:hover {
+        text-decoration: underline;
+    }
 
-.footer__link {
-    /* Типографика */
-    font-size: 1.2rem;
-    color: #593e22;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-}
+    /* === СТИЛИ ДЛЯ СОЦСЕТЕЙ === */
+    .footer__socials {
+        /* Box model */
+        width: 100%; 
+        
+        /* Display & Flex */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
 
-.footer__link:hover {
-    text-decoration: underline;
-}
+        /* Box model */
+        margin-top: 2.5rem;
+    }
 
-/* === СТИЛИ ДЛЯ СОЦСЕТЕЙ === */
-.footer__socials {
-    /* Box model */
-    width: 100%; 
-    
-    /* Display & Flex */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    .footer__social-icon {
+        /* Box model */
+        width: 40px;
+        height: 40px;
 
-    /* Box model */
-    margin-top: 2.5rem;
-}
+        /* Прочее */
+        object-fit: contain;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-.footer__social-icon {
-    /* Box model */
-    width: 40px;
-    height: 40px;
-
-    /* Прочее */
-    object-fit: contain;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.footer__social-link:hover .footer__social-icon {
-    opacity: 0.7;
-    transform: translateY(-3px);
+    .footer__social-link:hover .footer__social-icon {
+        opacity: 0.7;
+        transform: translateY(-3px);
+    }
 }
