@@ -117,6 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ================================================= */
 /* === Зацикленная карусель «ОТЗЫВЫ» (≤768px) === */
 /* ================================================= */
+/* ================================================= */
+/* === Зацикленная карусель «ОТЗЫВЫ» (≤768px) === */
+/* ================================================= */
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.reviews__grid');
     if (!grid) return;
@@ -126,21 +129,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots     = document.querySelectorAll('.reviews__dot');
     const mq       = window.matchMedia('(max-width: 768px)');
 
-    let slidesCount = 0;
-    let scrollTimer = null;
-    let revealTimer = null;
-    let resizeTimer = null;
+    let slidesCount   = 0;
+    let scrollTimer   = null;
+    let revealTimer   = null;
+    let resizeTimer   = null;
+    let isJumping     = false;   /* защита от ложных срабатываний во время jumpTo */
 
     const slideWidth   = () => grid.clientWidth;
     const currentIndex = () => Math.round(grid.scrollLeft / slideWidth());
 
     /* Мгновенный переход к слайду */
     function jumpTo(index) {
+        isJumping = true;
         grid.style.scrollSnapType = 'none';
         grid.scrollTo({ left: index * slideWidth(), behavior: 'auto' });
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 grid.style.scrollSnapType = '';
+                isJumping = false;
             });
         });
     }
@@ -169,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* Запуск таймера для текущей активной карточки */
+    /* Запуск таймера для текущей карточки */
     function scheduleReveal(delay = 3000) {
         clearTimeout(revealTimer);
         revealTimer = setTimeout(() => {
@@ -179,6 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 cards[i].classList.add('reviews__card--active');
             }
         }, delay);
+    }
+
+    /* Проверка позиции — незаметный перенос с клона на оригинал */
+    function checkLoopPosition() {
+        if (isJumping) return;
+        const i = currentIndex();
+        if (i <= 0) {
+            jumpTo(slidesCount);
+        } else if (i >= slidesCount + 1) {
+            jumpTo(1);
+        }
     }
 
     /* Клонирование первого и последнего слайдов */
@@ -209,37 +226,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function destroyLoop() {
         resetAllCards();
+        clearTimeout(scrollTimer);
         grid.querySelectorAll('.reviews__card--clone').forEach((c) => c.remove());
         grid.style.scrollSnapType = '';
         grid.scrollLeft = 0;
     }
 
-    /* При скролле — сбрасываем и обновляем после остановки */
-    grid.addEventListener('scroll', () => {
-        if (!mq.matches) return;
-        
-        resetAllCards();
+    /* Обработка остановки скролла */
+    function onScrollStopped() {
+        if (!mq.matches || isJumping) return;
+        checkLoopPosition();
         updateDots();
+        scheduleReveal();
+    }
 
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-            scheduleReveal();
-        }, 150);
-    }, { passive: true });
+    /* Scroll event — используем scrollend если поддерживается, иначе debounce */
+    if ('onscrollend' in window) {
+        grid.addEventListener('scrollend', onScrollStopped, { passive: true });
+    } else {
+        grid.addEventListener('scroll', () => {
+            if (!mq.matches || isJumping) return;
+            resetAllCards();
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(onScrollStopped, 400); /* увеличено с 150 до 400 */
+        }, { passive: true });
+    }
 
-    /* Стрелки */
+    /* Стрелки — вычисляем целевой индекс и обновляем точки сразу */
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             if (!mq.matches) return;
             resetAllCards();
+            clearTimeout(scrollTimer);
+            const targetIndex = currentIndex() - 1;
             grid.scrollBy({ left: -slideWidth(), behavior: 'smooth' });
+            /* обновляем точки сразу, зная целевой индекс */
+            const realIndex = toRealIndex(targetIndex);
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('reviews__dot--active', idx === realIndex);
+            });
         });
     }
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             if (!mq.matches) return;
             resetAllCards();
+            clearTimeout(scrollTimer);
+            const targetIndex = currentIndex() + 1;
             grid.scrollBy({ left: slideWidth(), behavior: 'smooth' });
+            const realIndex = toRealIndex(targetIndex);
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('reviews__dot--active', idx === realIndex);
+            });
         });
     }
 
@@ -248,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.addEventListener('click', () => {
             if (!mq.matches) return;
             resetAllCards();
+            clearTimeout(scrollTimer);
             jumpTo(idx + 1);
             updateDots();
             scheduleReveal();
