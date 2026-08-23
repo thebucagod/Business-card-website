@@ -9,7 +9,7 @@
         justify-content: center;
 
         /* Box model */
-        min-height: 70dvh;
+        min-height: 70svh;
 
         /* Фон и границы */
         background-image: url('../../../assets/imgs/hero-bg.webp');
