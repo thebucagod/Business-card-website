@@ -101,33 +101,26 @@
 }
 
 .service-row__btn {
-    /* Позиционирование */
-    position: relative;
-    z-index: 3;
-
     /* Display & Flex */
     display: inline-block;
+    gap: 0.55em;
 
     /* Box model */
     margin-top: 2.5rem;
-    padding: 0.75rem 1.5rem;
-
-    /* Типографика */
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
-
-    /* Фон и границы */
-    border: 1px solid #593e22;
-    border-radius: 30px;
-
-    /* Прочее */
-    transition: all 0.3s ease;
+    padding: 0;
+    min-height: 44px;
 }
 
-.service-row__btn-icon {
-    display: none;
+.service-row__btn-text {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #363636;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+
+    color: #363636;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .service-row__image-link {
