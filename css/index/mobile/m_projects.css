@@ -28,7 +28,7 @@
     .projects__arrow {
         position: absolute;
         top: 31vh;
-        top: 31dvh;
+        top: 31svh;
         z-index: 10;
 
         display: flex;
@@ -107,11 +107,11 @@
         background-size: 0 0; /* собственный фон карточки скрыт, фото перенесено на ::before */
     }
 
-    /* Фото отдельным блоком, 60–70dvh */
+    /* Фото отдельным блоком, 60–70svh */
     .projects__card::before {
         content: '';
         flex: 0 0 62vh;
-        flex-basis: 62dvh;
+        flex-basis: 62svh;
         background-image: inherit; /* подхватывает url() из классов --1 … --5 */
         background-size: cover;
         background-position: center;

@@ -4,7 +4,7 @@
 
 .header {
     /* Box model */
-    height: 15dvh;
+    height: 15svh;
     min-height: 100px;
     padding: 0 5%;
 
