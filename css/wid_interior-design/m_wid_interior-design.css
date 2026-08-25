@@ -1,0 +1,36 @@
+/* INTERIOR-DESIGN MOBILE VERSION */
+
+@media (max-width: 768px) {
+
+    .wid-page__line {
+        display: none;
+    }
+
+    .wid-page__title {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .wid-page__desc {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        margin: 0 1rem;
+    }
+
+    .wid-page__cards {
+        margin: 3rem 0 0 0;
+    }
+
+    .wid-page__list {
+        /* Box model */
+        padding-left: 0;
+
+        /* Типографика */
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+        line-height: 2;
+    }
+
+    .wid-page__card-text {
+        /* Типографика */
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+        line-height: 1.7;
+    }
+}
