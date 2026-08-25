@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    .add-header {
+        /* Box model */
+        height: 115px;
+
+        /* Display & Flex */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 0;
+
+        /* Фон и границы */
+        background: #f4f2f0;
+    }
+
+    .add-header__logo {
+        /* Box model */
+        height: 110px;
+
+        /* Прочее */
+        object-fit: contain;
+    }
+}
