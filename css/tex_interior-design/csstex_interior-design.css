@@ -1,10 +1,10 @@
+/* ============================================= */
+/* === БАЗОВЫЕ И ДЕСКТОПНЫЕ СТИЛИ === */
+/* ============================================= */
 .tex-page {
-    /* Box model */
     width: 100%;
     margin: 0 auto;
     padding: 2rem 0 3rem 0;
-
-    /* Фон */
     background-color: #f4f2f0;
 }
 
@@ -12,6 +12,7 @@
     /* Display & Flex */
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
 
     /* Box model */
@@ -19,13 +20,8 @@
 }
 
 .tex-page__line {
-    /* Display & Flex */
     flex: 1;
-
-    /* Box model */
     height: 2px;
-
-    /* Фон */
     background: rgba(89, 62, 34, 0.6);
 }
 
@@ -39,10 +35,7 @@
 }
 
 .tex-page__desc {
-    /* Box model */
     margin-bottom: 5rem;
-
-    /* Типографика */
     font-size: 1.3rem;
     text-align: center;
     color: #593e22;
@@ -50,99 +43,71 @@
 }
 
 .tex-page__what-we-create {
-    /* Box model */
     padding: 0 3rem;
-
-    /* Display & Flex */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .tex-page__wwc-desc {
-    /* Box model */
     margin-bottom: 3rem;
-
-    /* Типографика */
     font-size: 3rem;
 }
 
-/* ============================================= */
-/* === CARD SLIDER === */
-/* ============================================= */
-
-.card-slider {
-    /* Позиционирование */
+.card-slider__wrapper {
     position: relative;
+    width: 100%;
+}
 
-    /* Display */
-    display: grid;          /* ← добавляем grid */
-
-    /* Box model */
+/* Десктоп: строгая сетка для наложения слайдов */
+.card-slider {
+    position: relative;
+    display: grid;
     overflow: hidden;
-    /* min-height убираем — высоту даст реальный контент */
 }
 
 .card-slide {
-    /* Позиционирование — убираем absolute */
-    grid-area: 1 / 1;
-
-    /* Display & Flex */
+    grid-area: 1 / 1; /* Накладывает все слайды в одну ячейку */
     display: flex;
     align-items: center;
     gap: 3rem;
-
-    /* Box model */
     width: 100%;
-
-    /* Прочее */
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card-slide--active {
-    /* Прочее */
     opacity: 1;
     pointer-events: auto;
 }
 
 .card-slide__photo-wrap {
-    /* Box model */
     width: 50%;
     height: clamp(20rem, 30vw, 35rem);
     flex-shrink: 1;
-
-    /* Display & Flex */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 .card-slide__photo {
-    /* Box model */
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
-
-    /* Прочее */
     object-fit: contain;
     object-position: center;
 }
 
 .card-slide__content {
-    /* Display & Flex */
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-
-    /* Box model */
     flex: 1;
     padding-top: 1rem;
 }
 
 .card-slide__title {
-    /* Типографика */
     font-size: 2rem;
     font-weight: 300;
     color: #593e22;
@@ -150,29 +115,23 @@
 }
 
 .card-slide__text {
-    /* Типографика */
     font-size: 1.5rem;
     color: #333;
     line-height: 1.8;
     text-align: justify;
 }
 
+/* Десктопные кнопки */
 .card-slider__controls {
-    /* Display & Flex */
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-
-    /* Box model */
     margin-top: 2rem;
 }
 
 .card-slider__btn {
-    /* Box model */
     width: 50px;
     height: 50px;
-
-    /* Прочее */
     object-fit: contain;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -182,24 +141,39 @@
     opacity: 0.7;
 }
 
-/* ============================================= */
-/* === КОРРЕКТИРОВКА 3 И 4 СЛАЙДОВ (УЗКИЕ ФОТО) === */
-/* ============================================= */
-/* Меняем layout слайда на grid для точного контроля колонок */
-.card-slide:nth-child(3),
-.card-slide:nth-child(4) {
-    display: grid;
-    grid-template-columns: 50% 1fr;
-    gap: 0; /* Убираем общий отступ */
+/* Мобильные кнопки (скрыты на десктопе) */
+.card-slider__mobile-btn {
+    display: none;
+    position: absolute;
+    top: 30%; /* Чуть выше центра, чтобы попадать на область фото */
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(89, 62, 34, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
     align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
 }
 
+.card-slider__mobile-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.card-slider__mobile-btn--prev { left: 1rem; }
+.card-slider__mobile-btn--next { right: 1rem; }
+
+.card-slider__mobile-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Корректировка 3 и 4 слайдов для десктопа (без отрицательных отступов) */
 .card-slide:nth-child(3) .card-slide__photo-wrap,
 .card-slide:nth-child(4) .card-slide__photo-wrap {
-    width: 100%;
-}
-
-.card-slide:nth-child(3) .card-slide__content,
-.card-slide:nth-child(4) .card-slide__content {
-    margin-left: -14%;
+    width: 40%;
 }
