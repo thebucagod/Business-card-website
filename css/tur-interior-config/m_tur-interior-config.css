@@ -1,0 +1,65 @@
+/* ============================================= */
+/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) === */
+/* ============================================= */
+@media (max-width: 768px) {
+    .tur-page__line {
+        display: none;
+    }
+
+    .tur-page__title {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .tur-page__desc {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        margin: 0 1rem;
+    }
+
+    .what-i-take {
+        /* Display & Flex */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+
+        /* Box model */
+        padding: 2rem 1rem 3rem;
+    }
+
+    .what-i-take__title {
+        font-size: clamp(1.55rem, 4vw, 3rem);
+    }
+
+    .what-i-take__number {
+        display: none;
+    }
+
+    .what-i-take__col-title {
+        /* Box model */
+        margin-bottom: 1rem;
+    }
+
+    .what-i-take__col-text {
+        /* Box model */
+        margin-bottom: 1rem;
+
+        /* Типографика */
+        font-size: 1.3rem;
+    }
+
+    .what-i-take__icon {
+        /* Box model */
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ============================================= */
+/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 405px) === */
+/* ============================================= */
+@media (max-width: 405px) {
+    .what-i-take__grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem; /* Можно немного увеличить отступ для лучшей читаемости */
+    }
+}
