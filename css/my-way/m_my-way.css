@@ -1,0 +1,31 @@
+/* ============================================= */
+/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) === */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    .my-way-page {
+        padding-top: 7rem;
+    }
+
+    .my-way-page__title-wrap {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .my-way__photo-wrap {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .my-way__content {
+        display: block;
+    }
+
+    .my-way-page__contacts {
+        display: none;
+    }
+}

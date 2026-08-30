@@ -33,7 +33,7 @@
 /* Эффект при наведении на иконку */
 .my-way-page__home:hover {
     opacity: 0.7;
-    transform: scale(1.05); /* Легкое увеличение для интерактивности */
+    transform: scale(1.05);
 }
 
 .my-way-page__home-icon {
@@ -65,10 +65,17 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-
+    
     /* Box model */
     margin-bottom: 2.5rem;
-    padding-left: 28rem;
+    
+    padding-left: 0; 
+    
+    margin-left: calc(500px + 3rem); 
+    
+    width: calc(100% - 500px - 3rem); 
+    
+    text-align: center; 
 }
 
 .my-way-page__title {
