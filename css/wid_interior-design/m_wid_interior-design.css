@@ -1,21 +1,29 @@
-/* INTERIOR-DESIGN MOBILE VERSION */
+/* ============================================= */
+/* === MOBILE TUR-INTERIOR-CONFIG === */
+/* ============================================= */
 
 @media (max-width: 768px) {
 
     .wid-page__line {
+        /* Display & Flex/Grid */
         display: none;
     }
 
     .wid-page__title {
+        /* Типографика */
         font-size: clamp(1.5rem, 4vw, 3rem);
     }
 
     .wid-page__desc {
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        /* Box model */
         margin: 0 1rem;
+
+        /* Типографика */
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
 
     .wid-page__cards {
+        /* Box model */
         margin-top: 3rem;
     }
 

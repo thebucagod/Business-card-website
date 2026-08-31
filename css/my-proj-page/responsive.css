@@ -1,32 +1,38 @@
-/* ========================================
-   MY-PROJ-PAGE — responsive
-   ======================================== */
+/* ============================================= */
+/* === MY-PROJ-PAGE — responsive === */
+/* ============================================= */
 
 @media (max-width: 1300px) {
     .my-proj-page {
+        /* Box model */
         padding-top: 3rem;
     }
 }
 
 @media (max-width: 1024px) {
     .proj-section {
+        /* Box model */
         padding: 60px 48px;
         gap: 40px;
     }
 
     .proj-section__img-wrap {
+        /* Box model */
         width: 46%;
     }
 
     .proj-section__img-wrap img {
+        /* Box model */
         height: 380px;
     }
 
     .proj-section--wide-img .proj-section__img-wrap {
+        /* Box model */
         width: 50%;
     }
 
     .proj-section--wide-img .proj-section__img-wrap img {
+        /* Box model */
         height: 420px;
     }
 }

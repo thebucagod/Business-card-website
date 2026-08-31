@@ -2,47 +2,44 @@
 /* === RESPONSIVE: (≤1700px) === */
 /* ============================================= */
 
-/* ============================================= /
-/ === АДАПТАЦИЯ: Обтекание текста вокруг фото === /
-/ ============================================= */
-
+/* === АДАПТАЦИЯ: Обтекание текста вокруг фото === */
 @media (max-width: 1700px) {
     .my-way__content {
+        /* Display & Flex/Grid */
         display: block;
     }
 
     .my-way__photo-wrap {
+        /* Позиционирование */
         float: left;
-        width: 40%;            
-        max-width: 350px;       
+
+        /* Box model */
+        width: 40%;
+        max-width: 350px;
         margin-right: 2.5rem;
         margin-bottom: 1.5rem;
+        margin-top: 0;
     }
 
     .my-way__content-text {
+        /* Box model */
+        margin-top: 0;
+        padding-top: 0;
+
+        /* Типографика */
         text-align: justify;
     }
 
     .my-way-page__title-wrap {
+        /* Box model */
         margin-left: calc(40% + 2.5rem);
         width: calc(60% - 2.5rem);
-        max-width: calc(100% - 350px - 2.5rem); 
-    }
-
-    .my-way__content-text {
-        text-align: justify;
-        
-        margin-top: 0;
-        padding-top: 0;
-    }
-    
-    .my-way__photo-wrap {
-        margin-top: 0;
+        max-width: calc(100% - 350px - 2.5rem);
     }
 }
 
 /* ============================================= */
-/* === RESPONSIVE: (≤1700px) === */
+/* === RESPONSIVE: (≤1200px) === */
 /* ============================================= */
 
 @media (max-width: 1200px) {
@@ -61,6 +58,7 @@
     }
 
     .my-way-page__title {
+        /* Типографика */
         font-size: 3rem;
     }
 }

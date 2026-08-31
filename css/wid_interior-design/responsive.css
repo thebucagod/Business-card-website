@@ -4,18 +4,23 @@
 
 @media (max-width: 1300px) {
     .wid-page__cards {
+        /* Display & Flex/Grid */
         flex-direction: column;
-        gap: 2rem;
-        margin: 3rem 5% 0 5%;
         align-items: center;
+        gap: 2rem;
+
+        /* Box model */
+        margin: 3rem 5% 0 5%;
     }
 
     .wid-page__card {
+        /* Box model */
         width: 80%;
         box-sizing: border-box;
     }
 
     .wid-page__title {
+        /* Типографика */
         font-size: 2.2rem;
         white-space: wrap;
     }

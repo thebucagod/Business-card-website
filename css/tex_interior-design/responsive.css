@@ -1,35 +1,48 @@
-/* ============================================= /
-/ === RESPONSIVE: (≤1300px) === /
-/ ============================================= */
+/* ============================================= */
+/* === RESPONSIVE: (≤1300px) === */
+/* ============================================= */
+
 @media (max-width: 1300px) {
     .tex-page__title {
+        /* Типографика */
         font-size: 2.2rem;
         white-space: normal;
     }
 
     .card-slide {
+        /* Display & Flex/Grid */
         justify-content: center;
         gap: 2rem;
     }
 
     .card-slide__photo-wrap {
+        /* Box model */
         width: 40%;
         max-width: 350px;
     }
 
     .card-slide__content {
+        /* Display & Flex/Grid */
         align-items: center;
-        text-align: center;
+
+        /* Box model */
         padding: 0 1.5rem;
         max-width: 600px;
+
+        /* Типографика */
+        text-align: center;
     }
 
     .card-slide__text {
-        text-align: center;
+        /* Box model */
         max-width: 100%;
+
+        /* Типографика */
+        text-align: center;
     }
     
     .card-slide__title {
+        /* Типографика */
         text-align: center;
     }
 }

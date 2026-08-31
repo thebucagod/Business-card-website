@@ -1,22 +1,28 @@
 /* ============================================= */
-/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) === */
+/* === MOBILE TUR-INTERIOR-CONFIG === */
 /* ============================================= */
+
 @media (max-width: 768px) {
     .tur-page__line {
+        /* Display & Flex/Grid */
         display: none;
     }
 
     .tur-page__title {
+        /* Типографика */
         font-size: clamp(1.5rem, 4vw, 3rem);
     }
 
     .tur-page__desc {
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        /* Box model */
         margin: 0 1rem;
+
+        /* Типографика */
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
 
     .what-i-take {
-        /* Display & Flex */
+        /* Display & Flex/Grid */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -27,10 +33,12 @@
     }
 
     .what-i-take__title {
+        /* Типографика */
         font-size: clamp(1.55rem, 4vw, 3rem);
     }
 
     .what-i-take__number {
+        /* Display & Flex/Grid */
         display: none;
     }
 
@@ -59,7 +67,8 @@
 /* ============================================= */
 @media (max-width: 405px) {
     .what-i-take__grid {
+        /* Display & Flex/Grid */
         grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem; /* Можно немного увеличить отступ для лучшей читаемости */
+        gap: 1.5rem;
     }
 }

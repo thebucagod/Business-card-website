@@ -1,20 +1,25 @@
 /* ============================================= */
-/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) === */
+/* === MOBILE MY-WAY-PAGE === */
 /* ============================================= */
 
 @media (max-width: 768px) {
     .my-way-page {
+        /* Box model */
         padding-top: 7rem;
     }
 
     .my-way-page__title-wrap {
+        /* Box model */
         margin-left: 0;
         width: 100%;
         max-width: 100%;
     }
 
     .my-way__photo-wrap {
+        /* Позиционирование */
         float: none;
+
+        /* Box model */
         width: 100%;
         max-width: 100%;
         margin-right: 0;
@@ -22,10 +27,12 @@
     }
     
     .my-way__content {
+        /* Display & Flex/Grid */
         display: block;
     }
 
     .my-way-page__contacts {
+        /* Display & Flex/Grid */
         display: none;
     }
 }

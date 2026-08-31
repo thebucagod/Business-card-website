@@ -1,61 +1,77 @@
 /* ============================================= */
-/* === МОБИЛЬНАЯ ВЕРСИЯ (≤ 768px) === */
+/* === MOBILE TEX-INTERIOR-DESIGN === */
 /* ============================================= */
+
 @media (max-width: 768px) {
     .tex-page__line {
+        /* Display & Flex/Grid */
         display: none;
     }
 
     .tex-page__title {
+        /* Типографика */
         font-size: clamp(1.5rem, 4vw, 3rem);
     }
 
     .tex-page__desc {
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        /* Box model */
         margin: 0 1rem;
+
+        /* Типографика */
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
 
     .tex-page__what-we-create {
+        /* Box model */
         padding: 0 1rem;
         margin-top: 2rem;
     }
 
     .tex-page__wwc-desc {
-        font-size: 2rem;
+        /* Box model */
         margin-bottom: 2rem;
+
+        /* Типографика */
+        font-size: 2rem;
     }
 
-    /* КРИТИЧЕСКИ ВАЖНО: Полностью отменяем десктопный grid */
     .card-slider {
+        /* Display & Flex/Grid */
         display: flex !important;
         flex-direction: row !important;
+        gap: 0 !important;
+
+        /* Прочее/поведение */
         overflow-x: auto !important;
         overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none; /* Firefox */
-        gap: 0 !important;
     }
     
     .card-slider::-webkit-scrollbar {
+        /* Display & Flex/Grid */
         display: none; /* Chrome, Safari, Opera */
     }
 
-    /* КРИТИЧЕСКИ ВАЖНО: Отменяем наложение и делаем слайды блочными */
     .card-slide {
+        /* Display & Flex/Grid */
         display: flex !important;
         flex-direction: column !important;
-        flex: 0 0 100% !important; /* Каждый слайд занимает 100% ширины контейнера */
+        flex: 0 0 100% !important;
+
+        /* Box model */
         width: 100% !important;
-        scroll-snap-align: center !important;
-        
-        /* Принудительно делаем видимым, игнорируя JS-анимацию десктопа */
+
+        /* Прочее/поведение */
         opacity: 1 !important;
         pointer-events: auto !important;
         transform: none !important; 
+        scroll-snap-align: center !important;
     }
 
     .card-slide__photo-wrap {
+        /* Box model */
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 4 / 3;
@@ -63,31 +79,42 @@
     }
 
     .card-slide__photo {
+        /* Box model */
         width: 100%;
         height: 100%;
-        object-fit: cover;
+
+        /* Фон и границы */
         border-radius: 20px;
+
+        /* Прочее/поведение */
+        object-fit: cover;
     }
 
     .card-slide__content {
-        padding: 0 0.5rem;
-        text-align: center;
+        /* Display & Flex/Grid */
         align-items: center;
+
+        /* Box model */
+        padding: 0 0.5rem;
+
+        /* Типографика */
+        text-align: center;
     }
 
     .card-slide__text {
+        /* Типографика */
         font-size: 1.1rem;
         text-align: center;
         line-height: 1.6;
     }
 
-    /* Скрываем десктопные нижние кнопки */
     .card-slider__controls {
+        /* Display & Flex/Grid */
         display: none !important;
     }
 
-    /* Показываем мобильные боковые кнопки */
     .card-slider__mobile-btn {
+        /* Display & Flex/Grid */
         display: flex !important;
     }
 }

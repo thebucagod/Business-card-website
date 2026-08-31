@@ -1,52 +1,63 @@
 /* ============================================= */
-/* === PROJECTS — МОБИЛЬНАЯ ВЕРСИЯ (≤768px) === */
+/* === MOBILE PROJECTS === */
 /* ============================================= */
+
 @media (max-width: 768px) {
 
     .projects {
+        /* Box model */
         padding: 32px 0 0;
     }
 
     .projects__title {
+        /* Box model */
         padding: 0 5%;
         margin-bottom: 1.5rem;
     }
 
     .projects__title--text {
+        /* Типографика */
         font-size: 1.7rem;
     }
 
     /* Логотип скрываем */
     .projects__logo {
+        /* Display & Flex/Grid */
         display: none;
     }
 
     .projects__carousel {
+        /* Позиционирование */
         position: relative;
     }
 
     .projects__arrow {
+        /* Позиционирование */
         position: absolute;
         top: 31vh;
         top: 31svh;
         z-index: 10;
 
+        /* Display & Flex/Grid */
         display: flex;
         align-items: center;
         justify-content: center;
+
+        /* Box model */
         width: 44px;
         height: 44px;
         padding: 0;
 
+        /* Фон и границы */
         border: none;
         border-radius: 100%;
-        
-        background: transparent; 
-        box-shadow: none;                 
-        outline: none;                    
+        background: transparent;
+        box-shadow: none;
+
+        /* Прочее/поведение */
+        outline: none;
         appearance: none;
         -webkit-appearance: none;
-
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
         transition: transform 0.15s ease;
@@ -54,110 +65,153 @@
 
     .projects__arrow:focus,
     .projects__arrow:focus-visible {
+        /* Прочее/поведение */
         outline: none;
     }
 
     .projects__arrow:active {
+        /* Прочее/поведение */
         transform: scale(0.92);
     }
 
     .projects__arrow img {
+        /* Box model */
         width: 22px;
         height: 22px;
-        pointer-events: none;
-        user-select: none;
+
+        /* Фон и границы */
         border: 1px solid white;
         border-radius: 100%;
+
+        /* Прочее/поведение */
+        pointer-events: none;
+        user-select: none;
     }
 
-    .projects__arrow--left  { left: 12px; }
-    .projects__arrow--right { right: 12px; }
+    .projects__arrow--left {
+        /* Позиционирование */
+        left: 12px;
+    }
+
+    .projects__arrow--right {
+        /* Позиционирование */
+        right: 12px;
+    }
 
     /* Галерея: горизонтальный свайп, одна карточка на экран */
     .projects__grid {
+        /* Display & Flex/Grid */
         flex-direction: row;
         gap: 0;
 
+        /* Прочее/поведение */
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-
         scrollbar-width: none;
     }
 
     .projects__grid::-webkit-scrollbar {
+        /* Display & Flex/Grid */
         display: none;
     }
 
-    /* «Распаковываем» карточки 1–4 в общий поток скролла */
     .projects__left {
+        /* Display & Flex/Grid */
         display: contents;
     }
 
     .projects__card {
+        /* Display & Flex/Grid */
         flex: 0 0 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always; /* свайп строго по одной карточке */
-
         flex-direction: column;
         align-items: stretch;
+
+        /* Box model */
         padding: 0;
 
+        /* Фон и границы */
         background-color: #ffffff;
-        background-size: 0 0; /* собственный фон карточки скрыт, фото перенесено на ::before */
+        background-size: 0 0;
+
+        /* Прочее/поведение */
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 
-    /* Фото отдельным блоком, 60–70svh */
     .projects__card::before {
+        /* Позиционирование */
         content: '';
+
+        /* Display & Flex/Grid */
         flex: 0 0 62vh;
         flex-basis: 62svh;
-        background-image: inherit; /* подхватывает url() из классов --1 … --5 */
+
+        /* Фон и границы */
+        background-image: inherit;
         background-size: cover;
         background-position: center;
     }
 
-    /* Убираем тёмный градиент поверх фото */
     .projects__card::after {
+        /* Display & Flex/Grid */
         display: none;
     }
 
-    /* Текст под фото, на белом фоне — не поверх изображения */
     .projects__card-text {
+        /* Box model */
         padding: 20px 6% 12px;
+
+        /* Типографика */
         color: #363636;
         font-size: 1rem;
+
+        /* Фон и границы */
         background: #ffffff;
     }
 
-    /* Отключаем скрытие текста при «ховере» (тапе) на сенсорах */
     .projects__card:hover .projects__card-text {
+        /* Прочее/поведение */
         opacity: 1;
     }
 
-    /* Кнопка «Подробнее» под текстом */
     .projects__overlay {
+        /* Позиционирование */
         position: static;
+
+        /* Display & Flex/Grid */
+        justify-content: flex-start;
+
+        /* Box model */
         height: auto;
         margin-top: auto;
         padding: 24px 6% 32px;
 
+        /* Фон и границы */
         background: #ffffff;
+
+        /* Прочее/поведение */
         clip-path: none;
         transition: none;
-        justify-content: flex-start;
     }
 
     .projects__overlay-text {
-        opacity: 1;
-        transform: none;
-
+        /* Display & Flex/Grid */
         display: inline-block;
+
+        /* Box model */
         padding: 12px 30px;
+
+        /* Фон и границы */
         border: 1px solid #363636;
         border-radius: 999px;
 
+        /* Типографика */
         color: #363636;
         font-size: 1rem;
+
+        /* Прочее/поведение */
+        opacity: 1;
+        transform: none;
     }
 }

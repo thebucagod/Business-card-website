@@ -1,15 +1,19 @@
 /* ============================================= */
-/* === БАЗОВЫЕ И ДЕСКТОПНЫЕ СТИЛИ === */
+/* === TEX-INTERIOR-DESIGN === */
 /* ============================================= */
+
 .tex-page {
+    /* Box model */
     width: 100%;
     margin: 0 auto;
     padding: 2rem 0 3rem 0;
+
+    /* Фон и границы */
     background-color: #f4f2f0;
 }
 
 .tex-page__title-row {
-    /* Display & Flex */
+    /* Display & Flex/Grid */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,8 +24,13 @@
 }
 
 .tex-page__line {
+    /* Display & Flex/Grid */
     flex: 1;
+
+    /* Box model */
     height: 2px;
+
+    /* Фон и границы */
     background: rgba(89, 62, 34, 0.6);
 }
 
@@ -35,7 +44,10 @@
 }
 
 .tex-page__desc {
+    /* Box model */
     margin-bottom: 5rem;
+
+    /* Типографика */
     font-size: 1.3rem;
     text-align: center;
     color: #593e22;
@@ -43,71 +55,104 @@
 }
 
 .tex-page__what-we-create {
-    padding: 0 3rem;
+    /* Display & Flex/Grid */
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* Box model */
+    padding: 0 3rem;
 }
 
 .tex-page__wwc-desc {
+    /* Box model */
     margin-bottom: 3rem;
+
+    /* Типографика */
     font-size: 3rem;
 }
 
 .card-slider__wrapper {
+    /* Позиционирование */
     position: relative;
+
+    /* Box model */
     width: 100%;
 }
 
-/* Десктоп: строгая сетка для наложения слайдов */
 .card-slider {
+    /* Позиционирование */
     position: relative;
+
+    /* Display & Flex/Grid */
     display: grid;
+
+    /* Прочее/поведение */
     overflow: hidden;
 }
 
 .card-slide {
-    grid-area: 1 / 1; /* Накладывает все слайды в одну ячейку */
+    /* Позиционирование */
+    grid-area: 1 / 1;
+
+    /* Display & Flex/Grid */
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    /* Box model */
     width: 100%;
+
+    /* Прочее/поведение */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card-slide--active {
+    /* Прочее/поведение */
     opacity: 1;
     pointer-events: auto;
 }
 
 .card-slide__photo-wrap {
-    width: 50%;
-    height: clamp(20rem, 30vw, 35rem);
-    flex-shrink: 1;
+    /* Display & Flex/Grid */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
+
+    /* Box model */
+    width: 50%;
+    height: clamp(20rem, 30vw, 35rem);
 }
 
 .card-slide__photo {
+    /* Box model */
     max-width: 100%;
     max-height: 100%;
+
+    /* Фон и границы */
     border-radius: 40px;
+
+    /* Прочее/поведение */
     object-fit: contain;
     object-position: center;
 }
 
 .card-slide__content {
+    /* Display & Flex/Grid */
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     flex: 1;
+
+    /* Box model */
     padding-top: 1rem;
 }
 
 .card-slide__title {
+    /* Типографика */
     font-size: 2rem;
     font-weight: 300;
     color: #593e22;
@@ -115,65 +160,91 @@
 }
 
 .card-slide__text {
+    /* Типографика */
     font-size: 1.5rem;
     color: #333;
     line-height: 1.8;
     text-align: justify;
 }
 
-/* Десктопные кнопки */
 .card-slider__controls {
+    /* Display & Flex/Grid */
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+
+    /* Box model */
     margin-top: 2rem;
 }
 
 .card-slider__btn {
+    /* Box model */
     width: 50px;
     height: 50px;
+
+    /* Прочее/поведение */
     object-fit: contain;
     cursor: pointer;
     transition: opacity 0.2s;
 }
 
 .card-slider__btn:hover {
+    /* Прочее/поведение */
     opacity: 0.7;
 }
 
-/* Мобильные кнопки (скрыты на десктопе) */
 .card-slider__mobile-btn {
-    display: none;
+    /* Позиционирование */
     position: absolute;
-    top: 30%; /* Чуть выше центра, чтобы попадать на область фото */
+    top: 30%; 
     transform: translateY(-50%);
+    z-index: 10;
+
+    /* Display & Flex/Grid */
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
     width: 44px;
     height: 44px;
+
+    /* Фон и границы */
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(89, 62, 34, 0.2);
     border-radius: 50%;
+
+    /* Прочее/поведение */
     cursor: pointer;
-    z-index: 10;
-    align-items: center;
-    justify-content: center;
     transition: background 0.2s, transform 0.2s;
 }
 
 .card-slider__mobile-btn:active {
+    /* Прочее/поведение */
     transform: translateY(-50%) scale(0.95);
 }
 
-.card-slider__mobile-btn--prev { left: 1rem; }
-.card-slider__mobile-btn--next { right: 1rem; }
+.card-slider__mobile-btn--prev {
+    /* Позиционирование */
+    left: 1rem;
+}
+
+.card-slider__mobile-btn--next {
+    /* Позиционирование */
+    right: 1rem;
+}
 
 .card-slider__mobile-btn img {
+    /* Box model */
     width: 20px;
     height: 20px;
+
+    /* Прочее/поведение */
     object-fit: contain;
 }
 
-/* Корректировка 3 и 4 слайдов для десктопа (без отрицательных отступов) */
 .card-slide:nth-child(3) .card-slide__photo-wrap,
 .card-slide:nth-child(4) .card-slide__photo-wrap {
+    /* Box model */
     width: 40%;
 }

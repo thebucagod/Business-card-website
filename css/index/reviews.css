@@ -6,6 +6,7 @@
     /* Box model */
     padding: 80px 3%;
 
+    /* Фон и границы */
     background-color: #f8f7f6;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .reviews__grid {
-    /* Display & Flex */
+    /* Display & Flex/Grid */
     display: flex;
     gap: 16px;
 }
@@ -29,21 +30,23 @@
     /* Позиционирование */
     position: relative;
 
-    /* Display & Flex */
+    /* Display & Flex/Grid */
     flex: 1;
 
-    /* Прочее */
+    /* Прочее/поведение */
     overflow: hidden;
     cursor: pointer;
 }
 
 .reviews__photo {
+    /* Display & Flex/Grid */
+    display: block;
+
     /* Box model */
     width: 100%;
     height: 100%;
 
-    /* Прочее */
-    display: block;
+    /* Прочее/поведение */
     object-fit: cover;
     object-position: top center;
 }
@@ -57,7 +60,7 @@
     right: 0;
     z-index: 1;
 
-    /* Display & Flex — центрируем фото отзыва по вертикали */
+    /* Display & Flex/Grid */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,40 +68,44 @@
     /* Box model */
     height: 0%;
 
+    /* Фон и границы */
     background-color: rgba(0, 0, 0, 0.79);
 
-    /* Прочее */
+    /* Прочее/поведение */
     overflow: hidden;
     transition: height 0.4s ease;
 }
 
 .reviews__card:hover .reviews__overlay {
+    /* Box model */
     height: 100%;
 }
 
-/* Фото отзыва — горизонтальное, появляется с задержкой */
 .reviews__review-photo {
+    /* Display & Flex/Grid */
+    display: block;
+
     /* Box model */
     width: 100%;
     height: auto;
 
-    /* Прочее */
-    display: block;
+    /* Прочее/поведение */
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.3s ease 0.15s;   /* задержка как у overlay-text в what-i-do */
+    transition: opacity 0.3s ease 0.15s;
 }
 
 .reviews__card:hover .reviews__review-photo {
+    /* Прочее/поведение */
     opacity: 1;
 }
 
-/* Стрелки скрыты по умолчанию — появляются только на мобильной */
 .reviews__arrow {
+    /* Display & Flex/Grid */
     display: none;
 }
 
-/* Точки скрыты по умолчанию */
 .reviews__dots {
+    /* Display & Flex/Grid */
     display: none;
 }

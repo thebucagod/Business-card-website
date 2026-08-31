@@ -1,155 +1,243 @@
-/* ============================================= /
-/ === PROJECTS === /
-/ ============================================= */
+/* ============================================= */
+/* === PROJECTS === */
+/* ============================================= */
+
 .projects {
-  position: relative;
-  padding: 80px 3%;
+    /* Позиционирование */
+    position: relative;
+
+    /* Box model */
+    padding: 80px 3%;
 }
 
 .projects__title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+    /* Display & Flex/Grid */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* Box model */
+    margin-bottom: 3rem;
 }
 
 .projects__title--text {
-  color: #363636;
-  font-size: 3rem;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
+    /* Типографика */
+    color: #363636;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .projects__line {
-  flex: 1;
-  height: 2px;
-  background-color: black;
-  opacity: 0.5;
+    /* Display & Flex/Grid */
+    flex: 1;
+
+    /* Box model */
+    height: 2px;
+
+    /* Фон и границы */
+    background-color: black;
+
+    /* Прочее/поведение */
+    opacity: 0.5;
 }
 
 .projects__arrow {
-  display: none;
+    /* Display & Flex/Grid */
+    display: none;
 }
 
 .projects__grid {
-  display: flex;
-  gap: 16px;
+    /* Display & Flex/Grid */
+    display: flex;
+    gap: 16px;
 }
 
 .projects__left {
-  display: grid;
-  grid-template-columns: 1.3fr 0.6fr 0.6fr 1.3fr;
-  /* Исправлено: удалено дублирующееся свойство grid-template-rows */
-  grid-template-rows: 450px 450px; 
-  gap: 16px;
-  flex: 2;
+    /* Display & Flex/Grid */
+    display: grid;
+    grid-template-columns: 1.3fr 0.6fr 0.6fr 1.3fr;
+    grid-template-rows: 450px 450px;
+    gap: 16px;
+    flex: 2;
 }
 
-.projects__card--1 { grid-column: 1 / 2; }
-.projects__card--2 { grid-column: 2 / 5; }
-.projects__card--3 { grid-column: 1 / 4; }
-.projects__card--4 { grid-column: 4 / 5; }
+.projects__card--1 {
+    /* Display & Flex/Grid */
+    grid-column: 1 / 2;
+}
+
+.projects__card--2 {
+    /* Display & Flex/Grid */
+    grid-column: 2 / 5;
+}
+
+.projects__card--3 {
+    /* Display & Flex/Grid */
+    grid-column: 1 / 4;
+}
+
+.projects__card--4 {
+    /* Display & Flex/Grid */
+    grid-column: 4 / 5;
+}
 
 .projects__card {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  
-  transform: translate3d(0, 0, 0);
-  will-change: transform; 
-  backface-visibility: hidden;
+    /* Позиционирование */
+    position: relative;
+
+    /* Display & Flex/Grid */
+    display: flex;
+    align-items: flex-end;
+
+    /* Box model */
+    padding: 20px;
+
+    /* Фон и границы */
+    background-size: cover;
+    background-position: center;
+
+    /* Типографика */
+    text-decoration: none;
+    color: inherit;
+
+    /* Прочее/поведение */
+    cursor: pointer;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .projects__card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: 40%;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+    /* Позиционирование */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    /* Box model */
+    height: 40%;
+
+    /* Фон и границы */
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
 }
 
 .projects__card--5 {
-  flex: 1;
+    /* Display & Flex/Grid */
+    flex: 1;
 }
 
-.projects__card--1 { background-image: url('../../assets/imgs/project-1.webp'); }
-.projects__card--2 { background-image: url('../../assets/imgs/project-2.webp'); }
-.projects__card--3 { background-image: url('../../assets/imgs/project-3.webp'); }
-.projects__card--4 { background-image: url('../../assets/imgs/project-4.webp'); }
-.projects__card--5 { background-image: url('../../assets/imgs/project-5.webp'); }
+.projects__card--1 {
+    /* Фон и границы */
+    background-image: url('../../assets/imgs/project-1.webp');
+}
+
+.projects__card--2 {
+    /* Фон и границы */
+    background-image: url('../../assets/imgs/project-2.webp');
+}
+
+.projects__card--3 {
+    /* Фон и границы */
+    background-image: url('../../assets/imgs/project-3.webp');
+}
+
+.projects__card--4 {
+    /* Фон и границы */
+    background-image: url('../../assets/imgs/project-4.webp');
+}
+
+.projects__card--5 {
+    /* Фон и границы */
+    background-image: url('../../assets/imgs/project-5.webp');
+}
 
 .projects__card-text {
-  position: relative;
-  z-index: 2;
-  padding: 12px 16px;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  color: white;
-  transition: opacity 0.3s ease;
+    /* Позиционирование */
+    position: relative;
+    z-index: 2;
+
+    /* Box model */
+    padding: 12px 16px;
+
+    /* Типографика */
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: white;
+
+    /* Прочее/поведение */
+    transition: opacity 0.3s ease;
 }
 
 .projects__card:hover .projects__card-text {
-  opacity: 0;
+    /* Прочее/поведение */
+    opacity: 0;
 }
 
 .projects__overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* ОПТИМИЗАЦИЯ: Высота всегда 100%, скрываем через clip-path */
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  overflow: hidden;
-  
-  /* Анимация clip-path вместо height (работает на GPU, не вызывает Reflow) */
-  clip-path: inset(100% 0 0 0); 
-  transition: clip-path 0.4s ease;
+    /* Позиционирование */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    /* Display & Flex/Grid */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
+    height: 100%;
+
+    /* Фон и границы */
+    background: rgba(0, 0, 0, 0.75);
+
+    /* Прочее/поведение */
+    overflow: hidden;
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 0.4s ease;
 }
 
 .projects__card:hover .projects__overlay {
-  /* Плавное раскрытие снизу вверх */
-  clip-path: inset(0 0 0 0);
+    /* Прочее/поведение */
+    clip-path: inset(0 0 0 0);
 }
 
 .projects__overlay-text {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  opacity: 0;
-  transform: translateY(10px); 
-  transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
+    /* Типографика */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    /* Прочее/поведение */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
 }
 
 .projects__card:hover .projects__overlay-text {
-  opacity: 1;
-  transform: translateY(0);
+    /* Прочее/поведение */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects__logo {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+    /* Позиционирование */
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    /* Box model */
+    width: 60px;
+    height: 60px;
+
+    /* Прочее/поведение */
+    object-fit: contain;
 }

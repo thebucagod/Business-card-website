@@ -1,63 +1,99 @@
+/* ============================================= */
+/* === MOBILE PROCESS === */
+/* ============================================= */
+
 @media (max-width: 768px) {
     /* === PROCESS === */
     .process {
+        /* Box model */
         padding: 50px 3%;
     }
 
     .process__title {
+        /* Типографика */
         font-size: 1.7rem;
-        overflow-wrap: break-word; 
+        overflow-wrap: break-word;
     }
 
     .process__subtitle {
-        font-size: 1.5rem;
+        /* Box model */
         margin-bottom: 3rem;
+
+        /* Типографика */
+        font-size: 1.5rem;
         overflow-wrap: break-word;
     }
 
     .process__content {
+        /* Display & Flex/Grid */
         display: none;
     }
 
     .process__steps {
+        /* Display & Flex/Grid */
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem 1.5rem;
+
+        /* Box model */
         width: 100%;
+
+        /* Прочее/поведение */
         counter-reset: process-step;
     }
 
     .process__step {
+        /* Display & Flex/Grid */
         align-items: center;
+
+        /* Box model */
         padding: 0;
+        min-width: 0;
+
+        /* Прочее/поведение */
         cursor: default;
         counter-increment: process-step;
-        min-width: 0; 
     }
 
     .process__step--active {
+        /* Типографика */
         color: inherit;
     }
 
     .process__step::before {
+        /* Позиционирование */
         content: counter(process-step, decimal-leading-zero) ".";
+
+        /* Box model */
+        margin-bottom: 0.75rem;
+
+        /* Типографика */
         font-size: 0.9rem;
         letter-spacing: 0.05em;
+
+        /* Прочее/поведение */
         opacity: 0.6;
-        margin-bottom: 0.75rem;
     }
 
     .process__step-name {
+        /* Box model */
+        margin-bottom: 1rem;
+
+        /* Типографика */
         font-size: 1.4rem;
         text-align: center;
-        margin-bottom: 1rem;
         overflow-wrap: break-word;
         word-break: break-word;
     }
 
     .process__step-desc {
+        /* Display & Flex/Grid */
         display: block;
+
+        /* Box model */
         width: 100%;
+
+        /* Типографика */
         font-size: 1rem;
         line-height: 1.7;
         text-align: justify;
@@ -66,10 +102,12 @@
     }
 
     .process__step:last-child {
+        /* Display & Flex/Grid */
         grid-column: 1 / -1;
         justify-self: center;
+
+        /* Box model */
         max-width: 26rem;
         width: 100%;
-        max-width: 26rem;
     }
 }

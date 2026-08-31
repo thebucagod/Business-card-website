@@ -1,42 +1,58 @@
+/* ============================================= */
+/* === MOBILE MY-PROJ-PAGE === */
+/* ============================================= */
+
 @media (max-width: 768px) {
     .my-proj-page {
+        /* Box model */
         padding-top: 5rem;
     }
     
     .proj-section {
+        /* Display & Flex/Grid */
         flex-direction: column !important;
-        padding: 48px 24px;
         gap: 28px;
+
+        /* Box model */
+        padding: 48px 24px;
     }
 
     .proj-section__img-wrap,
     .proj-section--wide-img .proj-section__img-wrap {
+        /* Box model */
         width: 100%;
         max-width: 100%;
     }
 
     .proj-section__img-wrap img,
     .proj-section--wide-img .proj-section__img-wrap img {
+        /* Box model */
         height: 280px;
+
+        /* Фон и границы */
         border-radius: 8px;
     }
 
     .proj-section__content {
+        /* Box model */
         padding-top: 0;
     }
 
     .proj-section__body p {
+        /* Типографика */
         text-align: left;
     }
 }
 
 @media (max-width: 480px) {
     .proj-section {
+        /* Box model */
         padding: 36px 16px;
     }
 
     .proj-section__img-wrap img,
     .proj-section--wide-img .proj-section__img-wrap img {
+        /* Box model */
         height: 220px;
     }
 }
