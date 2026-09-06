@@ -85,18 +85,5 @@
 }
 
 .reviews__finger-hint {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.reviews__finger-hint img {
-    width: 40px;
-    height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    display: none;
 }
